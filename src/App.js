@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import classNames from 'classnames';
+import './styles.scss';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
+import CardItem from './components/CardItem/CardItem';
+import pizzas from './server/pizzas.json';
+import CardList from './components/CardList/CardList';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={
+      classNames(
+        'lightMode', 
+        {'darkMode': isDarkMode}
+      )
+    }
+    >
+      <Header isDark={isDarkMode} toggleMethod={toggleTheme} />
+      <Main />
     </div>
   );
 }

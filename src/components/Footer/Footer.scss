@@ -1,0 +1,81 @@
+@import '../../variables';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $container-padding;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #d7d7d7;
+  font-family: 'Nunito';
+  color: #272624;
+
+  &__logo {
+    width: 80px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    &-title {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+  
+    &-number {
+      text-decoration: none;
+      color: #e39c23;
+      font-size: 30px;
+      margin-right: 50px;
+      transition: .3s;
+      margin-bottom: 30px;
+  
+      &:hover {
+        color: #ac9a66;
+        transition: .3s;
+      }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    font-size: 20px;
+    margin-right: 50px;
+  }
+  &__item {
+    list-style: none;
+    font-size: 15px;
+    transition: .3s;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: #cd970d;
+      cursor: pointer;
+      transform: scale(1.3);
+      transition: .3s;
+    }
+  }
+}
+
+.socialNetworks {
+  &__item {
+    width: 35px;
+    transition: .3s;
+
+    &--marginInst {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      transition: .3s;
+    }
+  }
+}
