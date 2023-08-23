@@ -54,11 +54,20 @@ p {
     }
   }
 
+  //PIZZAPAGE//
+  .pizzaPage {
+    color: #fff;
+  }
+
   //FOOTER//
 
   .footer {
     color: #fff;
     background-color: #000;
+
+    .menu__link {
+      color: #fff;
+    }
   }
   
 }

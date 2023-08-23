@@ -13,33 +13,40 @@
 
   &__logo {
     width: 80px;
+    transition: .5s;
+
+    &:hover {
+      filter: drop-shadow(0 0 15px $main-color);
+      transition: .5s;
+    }
   }
 
   &__contacts {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  &__contactsTitle {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
   
-    &-title {
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
-  
-    &-number {
-      text-decoration: none;
-      color: #e39c23;
-      font-size: 30px;
-      margin-right: 50px;
+  &__contactsNumber {
+    text-decoration: none;
+    color: #ae8738;
+    font-size: 30px;
+    margin-right: 50px;
+    transition: .3s;
+    margin-bottom: 30px;
+
+    &:hover {
+      color: #fa9806;
       transition: .3s;
-      margin-bottom: 30px;
-  
-      &:hover {
-        color: #ac9a66;
-        transition: .3s;
-      }
     }
   }
 }
+
 
 .menu {
   display: flex;
@@ -48,6 +55,10 @@
   &__title {
     font-size: 20px;
     margin-right: 50px;
+  }
+  &__link {
+    text-decoration: none;
+    color: #000;
   }
   &__item {
     list-style: none;
@@ -69,7 +80,7 @@
     width: 35px;
     transition: .3s;
 
-    &--marginInst {
+    &_marginInst {
       margin-right: 15px;
     }
 

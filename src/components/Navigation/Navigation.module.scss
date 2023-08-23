@@ -23,27 +23,7 @@
     position: relative;
     text-decoration: none;
     color: #000;
-
-    &.active {
-      color: #fff;
-
-      .nav__icon {
-        filter: brightness(0) invert(1);
-      }
-        &::after {
-          content: ''; 
-          position: absolute; 
-          bottom: 2px; 
-          left: 0;
-          width: 100%;
-          height: 3px;
-          background-color: #fff;
-          transform: scaleX(1);
-          transform-origin: left;
-          transition: transform 0.3s;
-          border-radius: 10px;
-        }
-    }
+    cursor: pointer;
 
     &::after {
       content: ''; 
@@ -80,4 +60,33 @@
     height: 30px;
     margin-right: 10px;
   }
+}
+
+
+
+.active {
+  .nav__item {
+    color: #fff;
+
+  .nav__icon {
+    filter: brightness(0) invert(1);
+  }
+    &::after {
+      content: ''; 
+      position: absolute; 
+      bottom: 2px; 
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: transform 0.3s;
+      border-radius: 10px;
+    }
+  }
+  .nav__icon {
+    filter: brightness(0) invert(1);
+    transition: .3s;
+  } 
 }

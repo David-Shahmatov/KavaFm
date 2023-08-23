@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Піца Гавайська",
+    "weight": "530гр.",
+    "ingredients": "вершковий соус, моцарела, куряче філе гриль, ананаси, оливки, пармезан",
+    "image": "havaiian.png",
+    "price": "140 грн",
+    "type": "pizza",
+    "id": "havaiian"
+  },
+  {
+    "title": "Картопля Фрі",
+    "weight": "140/30гр.",
+    "ingredients": "картопля фрі, соус барбекю*",
+    "image": "frenchFries.png",
+    "price": "50 грн",
+    "type": "garnish",
+    "id": "frenchFries"
+  },
+  {
+    "title": "Піца Чотири сира",
+    "weight": "460гр.",
+    "ingredients": "вершковий соус, моцарела, крем-сир, дор-блю, пармезан, мускатний горіх",
+    "image": "fourSyra.png",
+    "price": "170 грн",
+    "type": "pizza",
+    "id": "four-cheese"
+  },
+  {
+    "title": "Нагетси",
+    "weight": "200/30гр.",
+    "ingredients": "куряче філе в паніровці, соус барбекю*",
+    "image": "naggets.png",
+    "price": "75 грн",
+    "type": "garnish",
+    "id": "naggets"
+  }
+]

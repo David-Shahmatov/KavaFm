@@ -4,97 +4,125 @@
     "weight": "520гр.",
     "ingredients": "вершковий соус,моцарела, куряче філе, шинка, цибулька, болгарський перець, пармезан, соус барбекю",
     "image": "havaiian.png",
-    "price": "140 грн"
+    "id": "barbecue",
+    "price": "140 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Чотири сира",
     "weight": "460гр.",
     "ingredients": "вершковий соус, моцарела, крем-сир, дор-блю, пармезан, мускатний горіх",
     "image": "fourSyra.png",
-    "price": "170 грн"
+    "id": "four-cheese",
+    "price": "170 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца М'ясна",
     "weight": "530гр.",
     "ingredients": "томатно-медовий соус, моцарела, бекон, салямі, ковбаски мисливські, шинка, пармезан",
     "image": "fourSyra.png",
-    "price": "160 грн"
+    "id": "meet",
+    "price": "160 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Карбонара",
     "weight": "510гр.",
     "ingredients": "вершковий соус, моцарела, бекон, гриби, цибулька 'марс', пармезан)",
     "image": "fourSyra.png",
-    "price": "140 грн"
+    "id": "karbonara",
+    "price": "140 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Гавайська",
     "weight": "530гр.",
     "ingredients": "вершковий соус, моцарела, куряче філе гриль, ананаси, оливки, пармезан",
-    "image": "fourSyra.png",
-    "price": "140 грн"
+    "image": "havaiian.png",
+    "id": "havaiian",
+    "price": "140 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца з лососем",
     "weight": "550гр.",
     "ingredients": "вершковий соус, моцарела, крем-сир, лосось, оливки зелені, сік лимону, пармезан",
     "image": "fourSyra.png",
-    "price": "200 грн"
+    "id": "salmon",
+    "price": "200 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Капричоза",
     "weight": "530гр.",
     "ingredients": "томатно-медовий соус, моцарела, шинка, гриби, оливки, пармезан",
     "image": "fourSyra.png",
-    "price": "140 грн"
+    "id": "capricious",
+    "price": "140 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Салямі",
     "weight": "520гр.",
     "ingredients": "томатно - медовий соус, моцарелла, салямі, пармезан,",
     "image": "fourSyra.png",
-    "price": "140 грн"
+    "id": "salami",
+    "price": "140 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Груша-горгондзола",
     "weight": "510гр.",
     "ingredients": "вершковий соус, моцарела, сир горгондзола, груша, грецький горіх, мед, пармезан",
     "image": "fourSyra.png",
-    "price": "170 грн"
+    "id": "gorgonzola-pear",
+    "price": "170 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Амерікана",
     "weight": "550гр.",
     "ingredients": "томатно-медовий соус, моцарела, шинка, куряче філе, сир чеддер, смажена цибуля, огірок сол., соус барбекю, пармезан",
     "image": "fourSyra.png",
-    "price": "170 грн"
+    "id": "americana",
+    "price": "170 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Цезар",
     "weight": "510гр.",
     "ingredients": "вершковий соус, моцарела, бекон, куряче філе, листя салату, томати, соус 'Цезар', пармезан",
     "image": "fourSyra.png",
-    "price": "155 грн"
+    "id": "cezar",
+    "price": "155 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Пепероні",
     "weight": "480гр.",
     "ingredients": "томатно-медовий соус, салямі чоррізо, моцарела, соус табаско, перець халапено, пармезан",
     "image": "fourSyra.png",
-    "price": "170 грн"
+    "id": "peperoni",
+    "price": "170 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Баварська",
     "weight": "540гр.",
     "ingredients": "томатно-медовий соус, моцарела, мисливські ковбаски, болгарський перець, гриби, пармезан",
     "image": "fourSyra.png",
-    "price": "150 грн"
+    "id": "bavarian",
+    "price": "150 грн",
+    "type": "pizza"
   },
   {
     "title": "Піца Поло",
     "weight": "500гр.",
     "ingredients": "вершковий соус, моцарела, куряче філе гриль, дор-блю, грецький горіх, трюфельне масло, пармезан",
     "image": "fourSyra.png",
-    "price": "180 грн"
+    "id": "polo",
+    "price": "180 грн",
+    "type": "pizza"
   }
 ]

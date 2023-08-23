@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import './Header.scss';
+import { Link } from 'react-router-dom';
+import styles from './Header.module.scss';
 import logo from '../../images/kavaLogo.png';
 import gps from '../../images/gps.png';
 import clock from '../../images/clock.png';
@@ -11,23 +11,25 @@ import Navigation from '../Navigation/Navigation';
 
 const Header = ({ toggleMethod, isDark }) => {
   return (
-    <div className="container">
-      <div className="header">
-        <img 
-          src={logo}
-          className="header__logo" 
-        />
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <Link to='/'>
+          <img 
+            src={logo}
+            className={styles.header__logo} 
+          />        
+        </Link>
         <a 
           href='https://goo.gl/maps/BnCSJ128eZHWr19x7'
-          className="header__item location"
+          className={`${styles.header__item} , ${styles.location}`}
           target="_blank"
         >
-          <img src={gps} alt="" className='header__gps'/>
-          <p className="header__city">Дніпро</p>
+          <img src={gps} alt="" className={styles.header__gps}/>
+          <p className={styles.header__city}>Дніпро</p>
         </a>
-        <div className="header__item schedule">
-          <img src={clock} className='header__clock'/>
-          <p className="schedule__text">
+        <div className={`${styles.header__item} ${styles.schedule}`}>
+          <img src={clock} className={styles.header__clock}/>
+          <p className={styles.schedule__text}>
             Працюємо з 10:00 до 20:00 <br/> 
             <p style={{
               color: 'grey',
@@ -35,15 +37,15 @@ const Header = ({ toggleMethod, isDark }) => {
             }}>Без вихідних</p>
           </p>
         </div>
-        <div className="header__item contacts">
-          <img src={phone} className='header__phone' />
-          <a href="tel:+38 095 568 95 93" className="phoneNumber">+38 095 568 95 93</a>
+        <div className={`${styles.header__item } ${styles.contacts}`}>
+          <img src={phone} className={styles.header__phone} />
+          <a href="tel:+38 095 568 95 93" className={styles.phoneNumber}>+38 095 568 95 93</a>
         </div>
         {isDark ? 
           <img 
             src={sun} 
             alt="sun" 
-            className='toogler'
+            className={styles.toogler}
             onClick={ toggleMethod }
             title='Змінити тему'
           />
@@ -51,14 +53,14 @@ const Header = ({ toggleMethod, isDark }) => {
           <img 
             src={moon} 
             alt="moon" 
-            className='toogler'
+            className={styles.toogler}
             title='Змінити тему'
             onClick={ toggleMethod }
           />
         }
-        <div className="header__item cart-block">
-          <img src={cart} alt="" className="cart" />
-          <p className='cart-title'>Кошик</p>
+        <div className={`${styles.header__item} ${styles.cartBlock}`}>
+          <img src={cart} alt="" className={styles.cart} />
+          <p className={styles.cartTitle}>Кошик</p>
         </div>
       </div>
       <Navigation />

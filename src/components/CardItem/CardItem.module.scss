@@ -3,6 +3,7 @@
 .cardItem {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 200px;
   border: 2px solid $main-color;
   padding: 15px;
@@ -10,6 +11,7 @@
   font-family: 'Nunito';
   gap: 10px;
   transition: .5s;
+  text-decoration: none;
 
   &:hover {
     cursor: pointer;
@@ -24,6 +26,7 @@
 
   &__title {
     font-size: 17px;
+    color: #000;
   }
 
   &__ingredients {
@@ -40,12 +43,12 @@
     margin: 5px 0;
   }
 
-  &__container-price {
+  &__containerPrice {
     display: flex;
     justify-content: space-between;
     font-weight: 600;
     font-size: 25px;
-
+    color: #000;
   }
 
   &__button {

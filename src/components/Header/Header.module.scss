@@ -2,7 +2,7 @@
 
 .container {
   padding: $container-padding;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
 }
 
@@ -17,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: 'Nunito', sans-serif;
+
   &__item {
     display: flex;
     align-items: center;
@@ -66,7 +67,7 @@
   color: #000;
 }
 
-.cart-block {
+.cartBlock {
   border: 2px  solid $main-color;
   padding: 10px;
   border-radius: 15px;

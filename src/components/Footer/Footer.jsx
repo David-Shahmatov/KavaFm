@@ -1,39 +1,52 @@
-import './Footer.scss';
+import { NavLink } from 'react-router-dom';
+import styles from './Footer.module.scss';
 import logo from '../../images/kavaLogo.png';
 import inst from '../../images/inst.png';
 import facebook from '../../images/facebook.png';
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className={styles.footer}>
       <a href="/">
-        <img className="footer__logo" src={logo} alt="" />
+        <img className={styles.footer__logo} src={logo} alt="" />
       </a>
-      <div className="menu">
-        <p className="menu__title">Наше меню:</p>
-        <ul className="menu__list">
-          <li className="menu__item">Піца</li>
-          <li className="menu__item">Гарнір</li>
-          <li className="menu__item">Салати</li>
-          <li className="menu__item">Сендвічі</li>
-          <li className="menu__item">Морозиво</li>
-          <li className="menu__item">Напої</li>
+      <div className={styles.menu}>
+        <p className={styles.menu__title}>Наше меню:</p>
+        <ul className={styles.menu__list}>
+          <NavLink className={styles.menu__link} to='/pizza'>
+            <li className={styles.menu__item}>Піца</li>
+          </NavLink>
+          <NavLink className={styles.menu__link} to='/garnish'>
+            <li className={styles.menu__item}>Гарнір</li>
+          </NavLink>
+          <NavLink className={styles.menu__link} to='/salads'>
+            <li className={styles.menu__item}>Салати</li>
+          </NavLink>
+          <NavLink className={styles.menu__link} to='/sandwiches'>
+            <li className={styles.menu__item}>Сендвічі</li>
+          </NavLink>
+          <NavLink className={styles.menu__link} to='/ice-cream'>
+            <li className={styles.menu__item}>Морозиво</li>
+          </NavLink>
+          <NavLink className={styles.menu__link} to='/drinks'>
+            <li className={styles.menu__item}>Напої</li>
+          </NavLink>
         </ul>
       </div>
-      <div className="footer__contacts">
-        <p className="footer__contacts-title">Замовляйте те смачненьке, чого вам не вистачало! 😋</p>
-        <a href="tel:+38 095 568 95 93" className="footer__contacts-number">+38 095 568 95 93</a>
-        <div className="socialNetworks">
+      <div className={styles.footer__contacts}>
+        <p className={styles.footer__contactsTitle}>Замовляйте те смачненьке, чого вам не вистачало! 😋</p>
+        <a href="tel:+38 095 568 95 93" className={styles.footer__contactsNumber}>+38 095 568 95 93</a>
+        <div className={styles.socialNetworks}>
           <a href="https://www.instagram.com/kava_fm_pizza/" target='_blanck'>
             <img 
-              className="socialNetworks__item socialNetworks__item--marginInst" 
+              className={`${styles.socialNetworks__item} ${styles.socialNetworks__item_marginInst}`} 
               src={inst} 
               alt="instagramm" 
             />
           </a>
           <a href="https://www.facebook.com/kavafm" target='_blanck'>
             <img 
-              className="socialNetworks__item" 
+              className={styles.socialNetworks__item}
               src={facebook} 
               alt="facebook" 
             />

@@ -1,12 +1,16 @@
 @import '../../variables';
 
+.link {
+  padding: $container-padding;
+}
+
 .cardList {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(4, auto);
   max-width: 944px;
   margin: 0 auto;
-  gap: 48px;
+  gap: 50px;
   padding: $container-padding;
   margin-bottom: 50px;
 }

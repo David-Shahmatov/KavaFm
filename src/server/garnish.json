@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Картопля Фрі",
+    "weight": "140/30гр.",
+    "ingredients": "картопля фрі, соус барбекю*",
+    "image": "frenchFries.png",
+    "price": "50 грн",
+    "id": "frenchFries",
+    "type": "garnish"
+  },
+  {
+    "title": "Картопля по-селянськи",
+    "weight": "160/30гр.",
+    "ingredients": "картопля скибочками, соус барбекю*",
+    "image": "villagePotato.png",
+    "price": "55 грн",
+    "id": "villagePotato",
+    "type": "garnish"
+  },
+  {
+    "title": "Нагетси",
+    "weight": "200/30гр.",
+    "ingredients": "куряче філе в паніровці, соус барбекю*",
+    "image": "naggets.png",
+    "price": "75 грн",
+    "id": "naggets",
+    "type": "garnish"
+  }
+]
