@@ -4,6 +4,18 @@
   padding: $container-padding;
 }
 
+.ways {
+  padding: $container-padding;
+  color: #6b6b6b;
+  margin-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+
+  &__link {
+    color: #6b6b6b;
+    text-decoration: none;
+  }
+}
+
 .cardList {
   display: grid;
   justify-content: center;

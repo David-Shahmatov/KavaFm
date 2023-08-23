@@ -7,7 +7,13 @@ const CardList = ({ items, typePage }) => {
   return (
     <>
     <div className={styles.ways}>
-        <Link className={styles.ways__link}>Головна </Link> - <Link className={styles.ways__link}>{typePage}</Link>
+    {typePage !== 'Головна' && (
+      <>
+        <Link to='/' className={styles.ways__link}>Головна </Link>
+          &gt;
+        <p className={styles.ways__link}> {typePage}</p>
+      </>
+    )}
     </div>
       <div className={styles.cardList}>
       {

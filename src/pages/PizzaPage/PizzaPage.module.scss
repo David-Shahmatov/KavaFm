@@ -27,8 +27,10 @@
 .infoBlock {
   display: flex;
   flex-direction: column;
+  // justify-content: space-between;
   height: 500px;
-  gap: 70px;
+  gap: 40px;
+  padding-top: 50px;
 
   &__additives {
     display: flex;
@@ -50,9 +52,50 @@
 
   &__weight {
     color: #797572;
+    font-size: 20px;
   }
 
   &__ingredients {
+    font-size: 20px;
+    color: #94864e;
+  }
+}
+
+.priceBlock {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-top: 20px;
+
+  &__price {
+    font-size: 30px;
+    font-weight: 500;
+  }
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  gap: 10px;
+  border: 2px solid $main-color;
+  border-radius: 10px;
+  padding: 10px;
+  color: $main-color;
+  font-weight: bold;
+  transition: .5s;
+
+  &:hover {
+    .cart__image, .cart__title {
+      filter: brightness(0) invert(1);
+    }
+    background-color: $main-color;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  &__title {
     font-size: 20px;
   }
 }

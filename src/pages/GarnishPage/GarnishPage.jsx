@@ -1,35 +1,48 @@
 import styles from './GarnishPage.module.scss';
 import { useParams, Link } from 'react-router-dom';
 import { garnishImages } from '../../images';
+import cart from '../../images/cart.png';
 
-const GarnishPage = ({ items }) => {
+
+const GarnishPage = ({ items, typePage }) => {
   const { id } = useParams();
 
-  const pizza = items.find(item => item.id === id);
+  const garnish = items.find(item => item.id === id);
 
-  if (!pizza) {
-    return <div>Loading...</div>;
+  if (!garnish) {
+    return <span class="loader"></span>;
   }
 
-  const pizzaImage = garnishImages[pizza.image];
+  const garnishImage = garnishImages[garnish.image];
 
   return (
+  <>
+    <div className={styles.ways}>
+    <p>
+    <Link to='/' className={styles.ways__link}>Головна </Link>
+      &gt;
+    <Link to='/garnish' className={styles.ways__link}> {typePage} </Link>
+      &gt; {garnish.title}
+    </p>
+  </div>
     <div className={styles.garnishPage}>
-      <div className={styles.garnishPage__way}>
-        <p>
-         <Link to='/'> Головна </Link> - <Link to='/garnish'>Гарнір</Link> - {pizza.title}</p>
-      </div>
-      <div className={styles.garnish__infoBlock}>
-        <img className={styles.infoBlock__image} src={pizzaImage} alt="" />
-        <div className={styles.infoBlock__describe}>
-          <p className={styles.infoBlock__title}>{pizza.title}</p>
-          <p className={styles.infoBlock__weight}>{pizza.weight}</p>
+      <img className={styles.garnishPage__image} src={garnishImage} alt="" />
+      <div className={styles.infoBlock}>
+          <p className={styles.infoBlock__title}>{garnish.title}</p>
+          <p className={styles.infoBlock__weight}>{garnish.weight}</p>
           <p className={styles.infoBlock__ingredients}>
-            <p style={{ fontSize: '20px' }}>Склад:</p> {pizza.ingredients}
+            <p style={{ fontSize: '25px', color: '#000' }}>Склад:</p> {garnish.ingredients}
           </p>
+        <div className={styles.priceBlock}>
+          <p className={styles.priceBlock__price}>{garnish.price}</p>
+          <div className={styles.cart}>
+            <img src={cart} alt="" className={styles.cart__image} />
+            <p className={styles.cart__title}>В кошик</p>
         </div>
       </div>
+      </div>
     </div>
+  </>
   );
 }
 
