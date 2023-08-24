@@ -25,7 +25,7 @@ const Main = () => {
     <div className="main">
       {shouldShowSlider && <Splide />}
       <Routes>
-        <Route path="/" element={<CardList items={mainPageData} typePage='Головна'/>} />
+        <Route path="/" element={<CardList items={mainPageData}/>} />
         <Route path="/pizza" element={<CardList items={pizzas} typePage='Піца' />} />
         <Route path="/pizza/:id" element={<PizzaPage items={pizzas} />} />
         <Route path="/garnish" element={<CardList items={garnish} typePage='Гарнір'/>} />

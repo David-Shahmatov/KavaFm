@@ -26,7 +26,7 @@ const CardItem = ({
       </p>
       <div className={styles.cardItem__containerPrice}>
         <div className={styles.cardItem__price}>Ціна:</div>
-        <div className={styles.cardItem__priceValue}>{price}</div>
+        <div className={styles.cardItem__priceValue}>{price} грн</div>
       </div>
       <button className={styles.cardItem__button}>В кошик</button>
     </Link>

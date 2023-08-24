@@ -53,17 +53,35 @@
 
   &__button {
     font-family: 'Nunito';
-    height: 50px;
+    padding: 15px 25px;
     background-color: transparent;
-    border: 2px solid $main-color;
-    font-size: 20px;
     border-radius: 10px;
+    position: relative;
+    font-size: 20px;
+    border: 2px solid $main-color;
     transition: .5s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      border-radius: 10px;
+      background-color: $main-color;
+      z-index: -1;
+      transition: all 250ms
+     }
 
     &:hover {
       background-color: $main-color;
       transition: .5s;
       cursor: pointer;
     }
+
+    &:hover::before {
+      width: 100%;
+     }
   }
 }

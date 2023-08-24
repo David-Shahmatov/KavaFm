@@ -21,7 +21,7 @@ const Loader = () => {
         </div>
         <div class={styles.spoke}></div>
       </div>
-      <p className={styles.text}>Нажаль , нічого не знайдено :(</p>
+      <p className={styles.text}>Здається , ти заблукав :(</p>
     </div>
   )
 }
