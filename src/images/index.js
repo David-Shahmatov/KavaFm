@@ -3,6 +3,7 @@ import havaiian from './havaiian.png';
 import frenchFries from './frenchFries.png';
 import naggets from './naggets.png';
 import villagePotato from './villagePotato.png';
+import cezar from './cezar.png';
 
 const pizzaImages = {
   "fourSyra.png": fourSyra,
@@ -15,4 +16,8 @@ const garnishImages = {
   "villagePotato.png": villagePotato,
 };
 
-export { pizzaImages, garnishImages };
+const saladsImages = {
+  "cezar.png": cezar
+};
+
+export { pizzaImages, garnishImages, saladsImages };

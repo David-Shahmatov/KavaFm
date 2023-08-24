@@ -1,5 +1,6 @@
 import styles from './Navigation.module.scss';
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import classNames from 'classnames';
 import pizzaIcon from '../../images/pizzaIcon.png';
 import drink from '../../images/drink.png';
 import frenchFriesIcon from '../../images/frenchFries-icon.png';
@@ -8,40 +9,77 @@ import salad from '../../images/salad.png';
 import sandwich from '../../images/sandwich.png';
 
 const Navigation = () => {
+  const location = useLocation();
+
   return (
     <nav className={styles.nav}>
       <ul className={styles.nav__list}>
-        <NavLink to="/pizza" style={{ textDecoration: 'none', color: '#fff' }} >
+        <NavLink
+          className={classNames({
+            [styles.active]: location.pathname === '/pizza'
+          })}
+          to="/pizza" 
+          style={{ textDecoration: 'none' }}
+       >
           <li className={styles.nav__item}>
             <img src={pizzaIcon} alt="" className={styles.nav__icon} />
             Піца
           </li>
         </NavLink>
-        <NavLink to="/garnish" style={{ textDecoration: 'none' }}>
+        <NavLink 
+          to="/garnish" 
+          className={classNames({
+            [styles.active]: location.pathname === '/garnish'
+          })}
+          style={{ textDecoration: 'none' }}
+        >
           <li className={styles.nav__item}>
             <img src={frenchFriesIcon} alt="" className={styles.nav__icon} />
             Гарнір
           </li>
         </NavLink>
-        <NavLink to="/salads" style={{ textDecoration: 'none' }}>
+        <NavLink 
+          to="/salads" 
+          className={classNames({
+            [styles.active]: location.pathname === '/salads'
+          })}
+          style={{ textDecoration: 'none' }}
+        >
           <li className={styles.nav__item}>
             <img src={salad} alt="" className={styles.nav__icon} />
             Салати
           </li>
         </NavLink>
-        <NavLink to="/sandwiches" style={{ textDecoration: 'none' }}>
+        <NavLink 
+          to="/sandwiches" 
+          className={classNames({
+            [styles.active]: location.pathname === '/sandwiches'
+          })}
+          style={{ textDecoration: 'none' }}
+        >
           <li className={styles.nav__item}>
             <img src={sandwich} alt="" className={styles.nav__icon} />
             Сендвічі
           </li>
         </NavLink>
-        <NavLink to="/ice-cream" style={{ textDecoration: 'none' }}>
+        <NavLink 
+          to="/ice-cream" 
+          className={classNames({
+            [styles.active]: location.pathname === '/ice-cream'
+          })}
+          style={{ textDecoration: 'none' }}
+        >
           <li className={styles.nav__item}>
             <img src={iceCream} alt="" className={styles.nav__icon} />
             Морозиво
           </li>
         </NavLink>
-        <NavLink to="/drinks" style={{ textDecoration: 'none' }}>
+        <NavLink 
+          to="/drinks" 
+          className={classNames({
+            [styles.active]: location.pathname === '/drinks'
+          })}
+          style={{ textDecoration: 'none' }}>
           <li className={styles.nav__item}>
             <img src={drink} alt="" className={styles.nav__icon} />
             Напої

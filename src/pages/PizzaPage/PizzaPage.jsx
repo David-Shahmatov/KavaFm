@@ -109,7 +109,6 @@ const PizzaPage = ({ items }) => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
     </>

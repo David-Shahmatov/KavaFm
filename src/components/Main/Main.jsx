@@ -8,6 +8,7 @@ import GarnishPage from '../../pages/GarnishPage/GarnishPage';
 import mainPageData from '../../server/mainPageData.json';
 import pizzas from '../../server/pizzas.json';
 import garnish from '../../server/garnish.json';
+import salads from '../../server/salads.json';
 
 const Main = () => {
   const [shouldShowSlider, setShouldShowSlider] = useState(true);
@@ -30,6 +31,7 @@ const Main = () => {
         <Route path="/pizza/:id" element={<PizzaPage items={pizzas} />} />
         <Route path="/garnish" element={<CardList items={garnish} typePage='Гарнір'/>} />
         <Route path="/garnish/:id" element={<GarnishPage items={garnish} typePage='Гарнір'/>} />
+        <Route path='/salads' element={<CardList items={salads} typePage='Салати' />} />
       </Routes>
       <Footer />
     </div>

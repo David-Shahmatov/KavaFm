@@ -4,7 +4,7 @@
     "weight": "140/30гр.",
     "ingredients": "картопля фрі, соус барбекю*",
     "image": "frenchFries.png",
-    "price": "50 грн",
+    "price": 50,
     "id": "frenchFries",
     "type": "garnish"
   },
@@ -13,7 +13,7 @@
     "weight": "160/30гр.",
     "ingredients": "картопля скибочками, соус барбекю*",
     "image": "villagePotato.png",
-    "price": "55 грн",
+    "price":55,
     "id": "villagePotato",
     "type": "garnish"
   },
@@ -22,7 +22,7 @@
     "weight": "200/30гр.",
     "ingredients": "куряче філе в паніровці, соус барбекю*",
     "image": "naggets.png",
-    "price": "75 грн",
+    "price": 75,
     "id": "naggets",
     "type": "garnish"
   }

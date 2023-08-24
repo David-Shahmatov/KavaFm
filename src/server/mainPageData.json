@@ -4,7 +4,7 @@
     "weight": "530гр.",
     "ingredients": "вершковий соус, моцарела, куряче філе гриль, ананаси, оливки, пармезан",
     "image": "havaiian.png",
-    "price": "140 грн",
+    "price": 140,
     "type": "pizza",
     "id": "havaiian"
   },
@@ -13,7 +13,7 @@
     "weight": "140/30гр.",
     "ingredients": "картопля фрі, соус барбекю*",
     "image": "frenchFries.png",
-    "price": "50 грн",
+    "price": 50,
     "type": "garnish",
     "id": "frenchFries"
   },
@@ -22,7 +22,7 @@
     "weight": "460гр.",
     "ingredients": "вершковий соус, моцарела, крем-сир, дор-блю, пармезан, мускатний горіх",
     "image": "fourSyra.png",
-    "price": "170 грн",
+    "price": 170,
     "type": "pizza",
     "id": "four-cheese"
   },
@@ -31,7 +31,7 @@
     "weight": "200/30гр.",
     "ingredients": "куряче філе в паніровці, соус барбекю*",
     "image": "naggets.png",
-    "price": "75 грн",
+    "price": 75,
     "type": "garnish",
     "id": "naggets"
   }

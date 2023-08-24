@@ -1,6 +1,6 @@
 import styles from './CardItem.module.scss';
 import { Link } from 'react-router-dom';
-import { pizzaImages, garnishImages } from '../../images';
+import { pizzaImages, garnishImages, saladsImages } from '../../images';
 
 const CardItem = ({ 
   weight,
@@ -13,8 +13,24 @@ const CardItem = ({
  }) => {
 
   let path = `/${type}/${id}`;
+  let imageSource;
 
-  const imageSource = type === 'pizza' ? pizzaImages[image] : garnishImages[image];
+  switch (type) {
+    case 'pizza':
+      imageSource = pizzaImages[image]
+      break;
+
+    case 'garnish':
+      imageSource = garnishImages[image]
+      break;
+
+    case 'salads':
+      imageSource = saladsImages[image]
+      break;
+  
+    default:
+      break;
+  }
 
   return (
     <Link to={path} className={styles.cardItem}>
