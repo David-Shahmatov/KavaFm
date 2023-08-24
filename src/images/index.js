@@ -21,3 +21,4 @@ const saladsImages = {
 };
 
 export { pizzaImages, garnishImages, saladsImages };
+

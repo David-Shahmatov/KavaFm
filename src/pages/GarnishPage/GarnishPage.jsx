@@ -5,7 +5,7 @@ import { garnishImages } from '../../images';
 import cart from '../../images/cart.png';
 
 
-const GarnishPage = ({ items, typePage }) => {
+const GarnishPage = ({ items }) => {
   const { id } = useParams();
 
   const garnish = items.find(item => item.id === id);
@@ -34,7 +34,7 @@ const GarnishPage = ({ items, typePage }) => {
     <p>
     <Link to='/' className={styles.ways__link}>Головна </Link>
       &gt;
-    <Link to='/garnish' className={styles.ways__link}> {typePage} </Link>
+    <Link to='/garnish' className={styles.ways__link}> Гарнір </Link>
       &gt; {garnish.title}
     </p>
   </div>
