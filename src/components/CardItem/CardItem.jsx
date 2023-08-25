@@ -1,6 +1,12 @@
 import styles from './CardItem.module.scss';
 import { Link } from 'react-router-dom';
-import { pizzaImages, garnishImages, saladsImages } from '../../images';
+import { 
+  pizzaImages, 
+  garnishImages, 
+  saladsImages, 
+  sandwicheImages,
+  iceCreamImages
+} from '../../images';
 
 const CardItem = ({ 
   weight,
@@ -26,6 +32,14 @@ const CardItem = ({
 
     case 'salads':
       imageSource = saladsImages[image]
+      break;
+
+    case 'sandwiches':
+      imageSource = sandwicheImages[image]
+      break;
+
+    case 'ice-creams':
+      imageSource = iceCreamImages[image]
       break;
   
     default:

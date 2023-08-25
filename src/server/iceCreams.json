@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Ванільне",
+    "weight": "150/20гр.",
+    "ingredients": "ванільне морозиво, ягідний топінг",
+    "image": "vanileIceCream.png",
+    "price": 60,
+    "id": "vanile",
+    "type": "ice-creams"
+  },
+  {
+    "title": "Шоколадне",
+    "weight": "150/20гр.",
+    "ingredients": "шоколадне морозиво, шоколадний топінг",
+    "image": "vanileIceCream.png",
+    "price": 60,
+    "id": "chocolate",
+    "type": "ice-creams"
+  }
+]

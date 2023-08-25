@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Сендвіч з куркою",
+    "weight": "270гр.",
+    "ingredients": "тостерний хліб, куряче філе гриль, томат, сир чеддер, соус гірчичний",
+    "image": "sandwich.png",
+    "price": 70,
+    "id": "z-kurkoyu",
+    "type": "sandwiches"
+  },
+  {
+    "title": "Сендвіч з шинкою",
+    "weight": "240гр.",
+    "ingredients": "тостерний хліб, шинка, огірок солоний, сир чеддер, соус гірчичний",
+    "image": "sandwich.png",
+    "price": 70,
+    "id": "z-shinkoyu",
+    "type": "sandwiches"
+  },
+  {
+    "title": "Сендвіч сирний",
+    "weight": "230гр.",
+    "ingredients": "тостерний хліб, моцарела, сир чеддер, крем-сир",
+    "image": "sandwich.png",
+    "price": 75,
+    "id": "syrniy",
+    "type": "sandwiches"
+  }
+]

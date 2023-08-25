@@ -6,7 +6,7 @@ import drink from '../../images/drink.png';
 import frenchFriesIcon from '../../images/frenchFries-icon.png';
 import iceCream from '../../images/iceCream.png';
 import salad from '../../images/salad.png';
-import sandwich from '../../images/sandwich.png';
+import sandwichIcon from '../../images/sandwichIcon.png';
 
 const Navigation = () => {
   const location = useLocation();
@@ -58,14 +58,14 @@ const Navigation = () => {
           style={{ textDecoration: 'none' }}
         >
           <li className={styles.nav__item}>
-            <img src={sandwich} alt="" className={styles.nav__icon} />
+            <img src={sandwichIcon} alt="" className={styles.nav__icon} />
             Сендвічі
           </li>
         </NavLink>
         <NavLink 
-          to="/ice-cream" 
+          to="/ice-creams" 
           className={classNames({
-            [styles.active]: location.pathname === '/ice-cream'
+            [styles.active]: location.pathname === '/ice-creams'
           })}
           style={{ textDecoration: 'none' }}
         >

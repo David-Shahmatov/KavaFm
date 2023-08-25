@@ -4,6 +4,8 @@ import frenchFries from './frenchFries.png';
 import naggets from './naggets.png';
 import villagePotato from './villagePotato.png';
 import cezar from './cezar.png';
+import sandwich from './sandwich.png';
+import vanileIceCream from './vanileIceCream.png';
 
 const pizzaImages = {
   "fourSyra.png": fourSyra,
@@ -20,5 +22,19 @@ const saladsImages = {
   "cezar.png": cezar
 };
 
-export { pizzaImages, garnishImages, saladsImages };
+const sandwicheImages = {
+  "sandwich.png": sandwich
+};
+
+const iceCreamImages = {
+  "vanileIceCream.png": vanileIceCream
+};
+
+export { 
+  pizzaImages,
+  garnishImages,
+  saladsImages,
+  sandwicheImages,
+  iceCreamImages,
+};
 

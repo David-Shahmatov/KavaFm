@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Splide from '../../components/Splide/Splide';
+
+import Splide from '../Splide/Splide';
 import CardList from '../CardList/CardList';
 import Footer from '../Footer/Footer';
+
 import PizzaPage from '../../pages/PizzaPage/PizzaPage';
 import GarnishPage from '../../pages/GarnishPage/GarnishPage';
+import SaladPage from '../../pages/SaladPage/SaladPage';
+import SandwichPage from '../../pages/SandwichPage/SandwichPage';
+
 import mainPageData from '../../server/mainPageData.json';
 import pizzas from '../../server/pizzas.json';
 import garnish from '../../server/garnish.json';
 import salads from '../../server/salads.json';
-import SaladPage from '../../pages/SaladPage/SaladPage';
+import sandwiches from '../../server/sandwiches.json';
+import iceCreams from '../../server/iceCreams.json';
+import IceCreamPage from '../../pages/IceCreamPage/IceCream';
 
 const Main = () => {
   const [shouldShowSlider, setShouldShowSlider] = useState(true);
@@ -34,6 +41,10 @@ const Main = () => {
         <Route path="/garnish/:id" element={<GarnishPage items={garnish}/>} />
         <Route path='/salads' element={<CardList items={salads} typePage='Салати' />} />
         <Route path='/salads/:id' element={<SaladPage items={salads}/>} />
+        <Route path='/sandwiches' element={<CardList items={sandwiches} typePage='Сендвічі' />} />
+        <Route path='/sandwiches/:id' element={<SandwichPage items={sandwiches} />} />
+        <Route path='/ice-creams' element={<CardList items={iceCreams} typePage='Морозиво' />} />
+        <Route path='/ice-creams/:id' element={<IceCreamPage items={iceCreams} />} />
       </Routes>
       <Footer />
     </div>

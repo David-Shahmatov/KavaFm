@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { saladsImages } from '../../images';
 import cart from '../../images/cart.png';
+import NwfPage from '../../components/NwfPage/NwfPage';
 
 
 const SaladPage = ({ items }) => {
@@ -11,7 +12,7 @@ const SaladPage = ({ items }) => {
   const salad = items.find(item => item.id === id);
 
   if (!salad) {
-    return <span class="loader"></span>;
+    return <NwfPage />;
   }
 
   const saladImage = saladsImages[salad.image];
@@ -19,12 +20,12 @@ const SaladPage = ({ items }) => {
   return (
   <>
     <div className={styles.ways}>
-    <p>
-    <Link to='/' className={styles.ways__link}>Головна </Link>
-      &gt;
-    <Link to='/salads' className={styles.ways__link}> Салати </Link>
-      &gt; {salad.title}
-    </p>
+      <p>
+      <Link to='/' className={styles.ways__link}>Головна </Link>
+        &gt;
+      <Link to='/salads' className={styles.ways__link}> Салати </Link>
+        &gt; {salad.title}
+      </p>
   </div>
     <div className={styles.saladsPage}>
       <img className={styles.saladsPage__image} src={saladImage} alt="" />
