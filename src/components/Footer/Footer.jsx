@@ -25,7 +25,7 @@ const Footer = () => {
           <NavLink className={styles.menu__link} to='/sandwiches'>
             <li className={styles.menu__item}>Сендвічі</li>
           </NavLink>
-          <NavLink className={styles.menu__link} to='/ice-cream'>
+          <NavLink className={styles.menu__link} to='/ice-creams'>
             <li className={styles.menu__item}>Морозиво</li>
           </NavLink>
           <NavLink className={styles.menu__link} to='/drinks'>

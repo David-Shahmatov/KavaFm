@@ -4,12 +4,10 @@ import logo from '../../images/kavaLogo.png';
 import gps from '../../images/gps.png';
 import clock from '../../images/clock.png';
 import phone from '../../images/phone.png';
-import sun from '../../images/sun.png';
-import moon from '../../images/moon.png';
 import cart from '../../images/cart.png';
 import Navigation from '../Navigation/Navigation';
 
-const Header = ({ toggleMethod, isDark }) => {
+const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -41,23 +39,6 @@ const Header = ({ toggleMethod, isDark }) => {
           <img src={phone} className={styles.header__phone} />
           <a href="tel:+38 095 568 95 93" className={styles.phoneNumber}>+38 095 568 95 93</a>
         </div>
-        {isDark ? 
-          <img 
-            src={sun} 
-            alt="sun" 
-            className={styles.toogler}
-            onClick={ toggleMethod }
-            title='Змінити тему'
-          />
-          :
-          <img 
-            src={moon} 
-            alt="moon" 
-            className={styles.toogler}
-            title='Змінити тему'
-            onClick={ toggleMethod }
-          />
-        }
         <div className={`${styles.header__item} ${styles.cartBlock}`}>
           <img src={cart} alt="" className={styles.cart} />
           <p className={styles.cartTitle}>Кошик</p>

@@ -5,7 +5,8 @@ import {
   garnishImages, 
   saladsImages, 
   sandwicheImages,
-  iceCreamImages
+  iceCreamImages,
+  drinkImages
 } from '../../images';
 
 const CardItem = ({ 
@@ -40,6 +41,10 @@ const CardItem = ({
 
     case 'ice-creams':
       imageSource = iceCreamImages[image]
+      break;
+
+    case 'drinks':
+      imageSource = drinkImages[image]
       break;
   
     default:

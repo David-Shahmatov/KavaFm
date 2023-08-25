@@ -37,7 +37,6 @@
 
 .splide__arrow {
   font-size: 40px;
-  color: #fff;
   background-color: $main-color;
   padding: 10px;
   border-radius: 50%;
@@ -45,7 +44,7 @@
   opacity: .7;
 
   svg {
-    fill: white; /* Измените цвет на нужный */
+    fill: white;
   }
 
   &::before {

@@ -9,6 +9,8 @@ import PizzaPage from '../../pages/PizzaPage/PizzaPage';
 import GarnishPage from '../../pages/GarnishPage/GarnishPage';
 import SaladPage from '../../pages/SaladPage/SaladPage';
 import SandwichPage from '../../pages/SandwichPage/SandwichPage';
+import IceCreamPage from '../../pages/IceCreamPage/IceCream';
+import DrinkPage from '../../pages/DrinkPage/DrinkPage';
 
 import mainPageData from '../../server/mainPageData.json';
 import pizzas from '../../server/pizzas.json';
@@ -16,7 +18,7 @@ import garnish from '../../server/garnish.json';
 import salads from '../../server/salads.json';
 import sandwiches from '../../server/sandwiches.json';
 import iceCreams from '../../server/iceCreams.json';
-import IceCreamPage from '../../pages/IceCreamPage/IceCream';
+import drinks from '../../server/drinks.json';
 
 const Main = () => {
   const [shouldShowSlider, setShouldShowSlider] = useState(true);
@@ -45,6 +47,8 @@ const Main = () => {
         <Route path='/sandwiches/:id' element={<SandwichPage items={sandwiches} />} />
         <Route path='/ice-creams' element={<CardList items={iceCreams} typePage='Морозиво' />} />
         <Route path='/ice-creams/:id' element={<IceCreamPage items={iceCreams} />} />
+        <Route path='/drinks' element={<CardList items={drinks} typePage='Напої' />} />
+        <Route path='/drinks/:id' element={<DrinkPage items={drinks} />} />
       </Routes>
       <Footer />
     </div>

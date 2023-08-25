@@ -12,7 +12,7 @@
     "title": "Шоколадне",
     "weight": "150/20гр.",
     "ingredients": "шоколадне морозиво, шоколадний топінг",
-    "image": "vanileIceCream.png",
+    "image": "chocolateIceCream.png",
     "price": 60,
     "id": "chocolate",
     "type": "ice-creams"

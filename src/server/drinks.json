@@ -1,0 +1,314 @@
+[
+  {
+    "title": "Еспресо",
+    "weight": "30мл.",
+    "price": 25,
+    "image": "coffe.png",
+    "id": "espresso",
+    "type": "drinks"
+  },
+  {
+    "title": "Американо",
+    "weight": "180мл.",
+    "price": 25,
+    "image": "coffe.png",
+    "id": "americano",
+    "type": "drinks"
+  },
+  {
+    "title": "Американо з молоком",
+    "weight": "30мл.",
+    "price": 27,
+    "image": "coffe.png",
+    "id": "americanoWithMilk",
+    "type": "drinks"
+  },
+  {
+    "title": "Доппіо",
+    "weight": "60мл.",
+    "price": 30,
+    "image": "coffe.png",
+    "id": "doppio",
+    "type": "drinks"
+  },
+  {
+    "title": "Флет уайт",
+    "weight": "220мл.",
+    "price": 40,
+    "image": "coffe.png",
+    "id": "fletWhite",
+    "type": "drinks"
+  },
+  {
+    "title": "Капучіно",
+    "weight": "220мл.",
+    "price": 30,
+    "image": "coffe.png",
+    "id": "capuccino",
+    "type": "drinks"
+  },
+  {
+    "title": "Капучіно дабл",
+    "weight": "280мл.",
+    "price": 40,
+    "image": "coffe.png",
+    "id": "capuccinoDabl",
+    "type": "drinks"
+  },
+  {
+    "title": "Лате",
+    "weight": "280мл.",
+    "price": 35,
+    "image": "coffe.png",
+    "id": "late",
+    "type": "drinks"
+  },
+  {
+    "title": "Карамельний лате",
+    "weight": "280мл.",
+    "price": 40,
+    "image": "coffe.png",
+    "id": "caramelLate",
+    "type": "drinks"
+  },
+  {
+    "title": "Лате XL",
+    "weight": "380мл.",
+    "price": 50,
+    "image": "coffe.png",
+    "id": "lateXl",
+    "type": "drinks"
+  },
+  {
+    "title": "Раф",
+    "weight": "280мл.",
+    "price": 40,
+    "image": "coffe.png",
+    "id": "raf",
+    "type": "drinks"
+  },
+  {
+    "title": "Карамельний раф",
+    "weight": "280мл.",
+    "price": 45,
+    "image": "coffe.png",
+    "id": "caramelRaf",
+    "type": "drinks"
+  },
+  {
+    "title": "Какао",
+    "weight": "280мл.",
+    "price": 35,
+    "image": "coffe.png",
+    "id": "kakao",
+    "type": "drinks"
+  },
+  {
+    "title": "Какао XL",
+    "weight": "380мл.",
+    "price": 50,
+    "image": "coffe.png",
+    "id": "kakaoXl",
+    "type": "drinks"
+  },
+  {
+    "title": "Какао червоний",
+    "weight": "280мл.",
+    "price": 40,
+    "image": "coffe.png",
+    "id": "kakaoRed",
+    "type": "drinks"
+  },
+  {
+    "title": "Гарячий шоколад",
+    "weight": "250мл.",
+    "price": 50,
+    "image": "coffe.png",
+    "id": "hotChocolate",
+    "type": "drinks"
+  },
+  {
+    "title": "Чай чорний",
+    "weight": "450мл.",
+    "price": 40,
+    "image": "tea.png",
+    "id": "teaBlack",
+    "type": "drinks"
+  },
+  {
+    "title": "Чай чорний з бергамотом",
+    "weight": "450мл.",
+    "price": 40,
+    "image": "tea.png",
+    "id": "teaBlackWithBergamot",
+    "type": "drinks"
+  },
+  {
+    "title": "Чай зелений",
+    "weight": "450мл.",
+    "price": 40,
+    "image": "tea.png",
+    "id": "teaGreen",
+    "type": "drinks"
+  },
+  {
+    "title": "Чай зелений з жасміном",
+    "weight": "450мл.",
+    "price": 40,
+    "image": "tea.png",
+    "id": "teaGreen-with-jasmine",
+    "type": "drinks"
+  },
+  {
+    "title": "Нахабний фрукт",
+    "weight": "450мл.",
+    "price": 40,
+    "image": "tea.png",
+    "id": "boldFruit",
+    "type": "drinks"
+  },
+  {
+    "title": "Альпійський луг",
+    "weight": "450мл.",
+    "price": 40,
+    "image": "tea.png",
+    "id": "alpineMeadow",
+    "type": "drinks"
+  },
+  {
+    "title": "Ягідний",
+    "weight": "450мл.",
+    "price": 50,
+    "image": "tea.png",
+    "id": "berry",
+    "type": "drinks"
+  },
+  {
+    "title": "Обліпиховий",
+    "weight": "450мл.",
+    "price": 50,
+    "image": "tea.png",
+    "id": "seaBuckthorn",
+    "type": "drinks"
+  },
+  {
+    "title": "По-східному",
+    "weight": "450мл.",
+    "price": 50,
+    "image": "tea.png",
+    "id": "eastern",
+    "type": "drinks"
+  },
+  {
+    "title": "Глінтвейн",
+    "weight": "450мл.",
+    "price": 60,
+    "image": "tea.png",
+    "id": "mulledWine",
+    "type": "drinks"
+  },
+  {
+    "title": "Мілкшейк ванільний",
+    "weight": "450мл.",
+    "price": 25,
+    "image": "milkshake.png",
+    "id": "milkshakeVanil",
+    "type": "drinks"
+  },
+  {
+    "title": "Мілкшейк шоколадний",
+    "weight": "450мл.",
+    "price": 25,
+    "image": "milkshake.png",
+    "id": "milkshakeChocolate",
+    "type": "drinks"
+  },
+  {
+    "title": "Мілкшейк банановий",
+    "weight": "450мл.",
+    "price": 25,
+    "image": "milkshake.png",
+    "id": "milkshakeBanana",
+    "type": "drinks"
+  },
+  {
+    "title": "Мілкшейк ягідний",
+    "weight": "450мл.",
+    "price": 25,
+    "image": "milkshake.png",
+    "id": "milkshakeBerry",
+    "type": "drinks"
+  },
+  {
+    "title": "Лимонад цитрусовий",
+    "weight": "450мл.",
+    "price": 25,
+    "image": "lemonade.png",
+    "id": "lemonadeCitrus",
+    "type": "drinks"
+  },
+  {
+    "title": "Лимонад ківі-гранат",
+    "weight": "450мл.",
+    "price": 25,
+    "image": "lemonade.png",
+    "id": "lemonadeKiwi-garnet",
+    "type": "drinks"
+  },
+  {
+    "title": "Лимонад ягідний",
+    "weight": "450мл.",
+    "price": 25,
+    "image": "lemonade.png",
+    "id": "lemonadeBerry",
+    "type": "drinks"
+  },
+  {
+    "title": "Coca-cola",
+    "weight": "0,33л.",
+    "price": 25,
+    "image": "cola.png",
+    "id": "cocaCola",
+    "type": "drinks"
+  },
+  {
+    "title": "Fanta",
+    "weight": "0,33л.",
+    "price": 25,
+    "image": "fanta.png",
+    "id": "fanta",
+    "type": "drinks"
+  },
+  {
+    "title": "Sprite",
+    "weight": "0,33л.",
+    "price": 25,
+    "image": "sprite.png",
+    "id": "sprite",
+    "type": "drinks"
+  },
+  {
+    "title": "Вода Bon Aqua",
+    "weight": "0,5л.",
+    "price": 20,
+    "image": "bonAqua.png",
+    "id": "water-Bon-aqua",
+    "type": "drinks"
+  },
+  {
+    "title": "Сік скло",
+    "weight": "0,25л.",
+    "price": 40,
+    "image": "juiceGlass.png",
+    "id": "juiceGlass",
+    "type": "drinks"
+  },
+  {
+    "title": "Cik 'Rich' Kids",
+    "weight": "0,2л.",
+    "price": 20,
+    "image": "richKids.png",
+    "id": "juiceRichKids",
+    "type": "drinks"
+  }
+]
