@@ -33,7 +33,7 @@ const saladsImages = {
   "cezar.png": cezar
 };
 
-const sandwicheImages = {
+const sandwichImages = {
   "sandwich.png": sandwich
 };
 
@@ -59,7 +59,7 @@ export {
   pizzaImages,
   garnishImages,
   saladsImages,
-  sandwicheImages,
+  sandwichImages,
   iceCreamImages,
   drinkImages
 };

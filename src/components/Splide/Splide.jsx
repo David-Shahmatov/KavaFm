@@ -6,7 +6,6 @@ import './Splide.scss';
 import slideImg1 from '../../images/slideImg1.png';
 import slideImg2 from '../../images/slideImg2.png';
 import slideImg3 from '../../images/slideImg3.png';
-import slideImg4 from '../../images/slideImg4.png';
 
 
 const Slider = () => {
@@ -24,11 +23,6 @@ const Slider = () => {
           },
         }}
       >
-        <SplideSlide>
-          <div className='slide'>
-            <img className='slideImg' src={slideImg4} alt='Slide 4' />
-          </div>
-        </SplideSlide>
         <SplideSlide>
           <div className='slide'>
             <img className='slideImg' src={slideImg1} alt='Slide 1' />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import './Main.scss';
 
 import Splide from '../Splide/Splide';
 import CardList from '../CardList/CardList';
@@ -19,6 +20,7 @@ import salads from '../../server/salads.json';
 import sandwiches from '../../server/sandwiches.json';
 import iceCreams from '../../server/iceCreams.json';
 import drinks from '../../server/drinks.json';
+import CartPage from '../CartPage/CartPage';
 
 const Main = () => {
   const [shouldShowSlider, setShouldShowSlider] = useState(true);
@@ -49,8 +51,8 @@ const Main = () => {
         <Route path='/ice-creams/:id' element={<IceCreamPage items={iceCreams} />} />
         <Route path='/drinks' element={<CardList items={drinks} typePage='Напої' />} />
         <Route path='/drinks/:id' element={<DrinkPage items={drinks} />} />
+        <Route path='/cart' element={<CartPage />} />
       </Routes>
-      <Footer />
     </div>
   );
 }

@@ -16,7 +16,7 @@ const Navigation = () => {
       <ul className={styles.nav__list}>
         <NavLink
           className={classNames({
-            [styles.active]: location.pathname === '/pizza'
+            [styles.active]: location.pathname.includes('/pizza')
           })}
           to="/pizza" 
           style={{ textDecoration: 'none' }}
@@ -29,7 +29,7 @@ const Navigation = () => {
         <NavLink 
           to="/garnish" 
           className={classNames({
-            [styles.active]: location.pathname === '/garnish'
+            [styles.active]: location.pathname.includes('/garnish')
           })}
           style={{ textDecoration: 'none' }}
         >
@@ -41,7 +41,7 @@ const Navigation = () => {
         <NavLink 
           to="/salads" 
           className={classNames({
-            [styles.active]: location.pathname === '/salads'
+            [styles.active]: location.pathname.includes('/salads')
           })}
           style={{ textDecoration: 'none' }}
         >
@@ -53,7 +53,7 @@ const Navigation = () => {
         <NavLink 
           to="/sandwiches" 
           className={classNames({
-            [styles.active]: location.pathname === '/sandwiches'
+            [styles.active]: location.pathname.includes('/sandwiches')
           })}
           style={{ textDecoration: 'none' }}
         >
@@ -65,7 +65,7 @@ const Navigation = () => {
         <NavLink 
           to="/ice-creams" 
           className={classNames({
-            [styles.active]: location.pathname === '/ice-creams'
+            [styles.active]: location.pathname.includes('/ice-creams')
           })}
           style={{ textDecoration: 'none' }}
         >
@@ -77,7 +77,7 @@ const Navigation = () => {
         <NavLink 
           to="/drinks" 
           className={classNames({
-            [styles.active]: location.pathname === '/drinks'
+            [styles.active]: location.pathname.includes('/drinks')
           })}
           style={{ textDecoration: 'none' }}>
           <li className={styles.nav__item}>

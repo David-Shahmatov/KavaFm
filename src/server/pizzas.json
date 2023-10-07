@@ -3,7 +3,7 @@
     "title": "Піца Барбекю",
     "weight": "520гр.",
     "ingredients": "вершковий соус,моцарела, куряче філе, шинка, цибулька, болгарський перець, пармезан, соус барбекю",
-    "image": "havaiian.png",
+    "image": "fourSyra.png",
     "id": "barbecue",
     "price": 140,
     "type": "pizza"
@@ -39,7 +39,7 @@
     "title": "Піца Гавайська",
     "weight": "530гр.",
     "ingredients": "вершковий соус, моцарела, куряче філе гриль, ананаси, оливки, пармезан",
-    "image": "havaiian.png",
+    "image": "fourSyra.png",
     "id": "havaiian",
     "price": 140,
     "type": "pizza"

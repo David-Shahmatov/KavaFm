@@ -39,10 +39,14 @@ const Header = () => {
           <img src={phone} className={styles.header__phone} />
           <a href="tel:+38 095 568 95 93" className={styles.phoneNumber}>+38 095 568 95 93</a>
         </div>
+        <Link to='/cart' style={{
+          textDecoration: 'none'
+        }}>
         <div className={`${styles.header__item} ${styles.cartBlock}`}>
           <img src={cart} alt="" className={styles.cart} />
           <p className={styles.cartTitle}>Кошик</p>
         </div>
+        </Link>
       </div>
       <Navigation />
     </div>
