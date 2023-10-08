@@ -101,34 +101,31 @@ const SandwichPage = ({ items }) => {
             {sandwich.ingredients}
           </p>
           <div className={styles.priceBlock}>
+            <p className={styles.priceBlock__text}>Ціна:</p>
             <p className={styles.priceBlock__price}>{totalSandwichPrice} грн</p>
+          </div>
             {!itemInCart ? (
               <div className={styles.cart} onClick={handleAddToCart}>
                 <img src={cart} alt="" className={styles.cart__image} />
                 <p className={styles.cart__title}>В кошик</p>
               </div>
             ) : (
-              <div className={styles.cartActive} onClick={handleRemoveFromCart}>
-                <img src={cart} alt="" className={styles.cart__image} />
-                <p className={styles.cart__title}>У кошику</p>
+              <div className={styles.counter}>
+                <img
+                  className={styles.counter__icon}
+                  src={minus}
+                  alt="subtract"
+                  onClick={subtractMethod}
+                />
+                <p className={styles.counter__value}>{productCount[id]}</p>
+                <img
+                  className={styles.counter__icon}
+                  src={plus}
+                  alt="add"
+                  onClick={addMethod}
+                />
               </div>
             )}
-          </div>
-          <div className={styles.counter}>
-            <img
-              className={styles.counter__icon}
-              src={minus}
-              alt="subtract"
-              onClick={subtractMethod}
-            />
-            <p className={styles.counter__value}>{countOfProduct}</p>
-            <img
-              className={styles.counter__icon}
-              src={plus}
-              alt="add"
-              onClick={addMethod}
-            />
-          </div>
         </div>
       </div>
       <Footer />

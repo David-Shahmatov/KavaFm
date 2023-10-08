@@ -1,10 +1,14 @@
 @import '../../variables';
+@import '../../mixins';
 
-.link {
-  padding: $container-padding;
-}
+// .link {
+//   padding: $container-padding;
+// }
 
 .ways {
+  @include onPhone {
+    padding: $container-padding-phone;
+  }
   padding: $container-padding;
   color: #6b6b6b;
   margin-bottom: 20px;
@@ -17,6 +21,11 @@
 }
 
 .cardList {
+  @include onPhone {
+    padding: $container-padding-phone;
+    grid-template-columns: repeat(2, auto);
+  }
+
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(4, auto);

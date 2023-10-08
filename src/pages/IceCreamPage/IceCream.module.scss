@@ -1,6 +1,10 @@
 @import '../../variables';
+@import '../../mixins';
 
 .ways {
+  @include onPhone {
+    padding: $container-padding-phone;
+  }
   padding: $container-padding;
   color: #6b6b6b;
   margin-bottom: 20px;
@@ -13,6 +17,10 @@
 }
 
 .iceCreamPage {
+  @include onPhone {
+    flex-direction: column;
+    padding: $container-padding-phone;
+  }
   display: flex;
   align-items: center;
   padding: $container-padding;
@@ -20,52 +28,53 @@
   gap: 50px;
 
   &__image {
+    @include onPhone {
+      width: 400px;
+      height: 400px;
+    }
     width: 500px;
     height: 500px;
   }
 }
 
 .infoBlock {
+  @include onPhone {
+    gap: 10px;
+  }
   display: flex;
   flex-direction: column;
   height: 500px;
-  gap: 15px;
+  width: 400px;
+  gap: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
 
-  &__additives {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  &__describe {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    justify-content: center;
-  }
-
   &__title {
+    @include onPhone {
+      font-size: 25px;
+    }
     font-size: 40px;
   }
 
   &__weight {
+    @include onPhone {
+      font-size: 15px;
+    }
     color: #797572;
     font-size: 20px;
-  }
-
-  &__ingredients {
-    font-size: 20px;
-    color: #94864e;
   }
 }
 
 .priceBlock {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 50px;
   padding-top: 20px;
+
+  &__text {
+    font-size: 30px;
+    font-weight: 500;
+  }
 
   &__price {
     font-size: 30px;
@@ -74,13 +83,18 @@
 }
 
 .counter {
+  @include onPhone {
+    width: 400px;
+    padding: 5px;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
+  width: 400px;
+  height: 50px;
   padding: 10px;
-  border-radius: 30px;
-  background-color: #e9e8e7;
+  border-radius: 10px;
+  background-color: $main-color;
 
   &__icon {
     width: 40px;
@@ -93,10 +107,14 @@
 }
 
 .cart {
+  @include onPhone {
+    width: 400px;
+    padding: 5px;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 400px;
   gap: 10px;
   border: 2px solid $main-color;
   border-radius: 10px;
@@ -116,25 +134,5 @@
 
   &__title {
     font-size: 20px;
-  }
-}
-
-.cartActive {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  gap: 10px;
-  background-color: $main-color;
-  border-radius: 10px;
-  border: 2px solid $main-color;
-  padding: 10px;
-  color: #fff;
-  font-weight: bold;
-  transition: .5s;
-  cursor: pointer;
-
-  .cart__image, .cart__title {
-    filter: brightness(0) invert(1);
   }
 }

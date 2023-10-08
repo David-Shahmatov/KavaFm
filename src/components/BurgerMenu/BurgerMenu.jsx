@@ -49,7 +49,7 @@ const BurgerMenu = (  {
           className={styles.nav__item}
           onClick={() => handlerClick(burgerMenuSelected)}
         >
-          <li>Седвічі</li>
+          <li>Сендвічі</li>
         </NavLink>
         <NavLink 
           to='/ice-creams' 
@@ -67,7 +67,9 @@ const BurgerMenu = (  {
         </NavLink>
       </ul>
       <div className={styles.burgerMenu__bottom}>
-        <img src={phone} className={styles.burgerMenu__phone} />
+        <Link to='tel:+38 095 568 95 93'>
+          <img src={phone} className={styles.burgerMenu__phone} />
+        </Link>
         <Link to='/cart'>
           <img
             onClick={() => handlerClick(burgerMenuSelected)}

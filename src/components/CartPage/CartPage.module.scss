@@ -1,6 +1,10 @@
 @import '../../variables';
+@import '../../mixins';
 
 .cartPage {
+  @include onPhone {
+    padding: $container-padding-phone;
+  }
   display: flex;
   flex-direction: column;
   padding: $container-padding;
@@ -20,11 +24,17 @@
   }
 
   &__title {
+    @include onPhone {
+      font-size: 30px;
+    }
     font-size: 40px;
     margin-bottom: 20px;
   }
 
   &__content {
+    @include onPhone {
+      flex-direction: column;
+    }
     margin-top: 20px;
     display: flex;
     justify-content: space-between;

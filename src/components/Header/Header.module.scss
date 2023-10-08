@@ -2,9 +2,11 @@
 @import '../../mixins';
 
 .container {
+  @include onPhone {
+    padding: $container-padding-phone;
+  }
   padding: $container-padding;
   margin-bottom: 30px;
-
 }
 
 .toogler {
@@ -38,6 +40,9 @@
 
 
   &__logo {
+    @include onPhone {
+      width: 70px;
+    }
     width: 80px;
     padding: 10px 0;
   }
@@ -73,10 +78,17 @@
 }
 
 .cartBlock {
+  @include onPhone {
+    display: none;
+  }
+  display: flex;
+  justify-content: center;
   border: 2px  solid $main-color;
-  padding: 10px;
+  // padding: 10px;
   border-radius: 15px;
   color: $main-color;
+  width: 113px;
+  height: 55px;
 }
 
 .cart {
@@ -92,5 +104,7 @@
   display: none;
   @include onPhone {
     display: block;
+    width: 40px;
+    height: 40px;
   }
 }
