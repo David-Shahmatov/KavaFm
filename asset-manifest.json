@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/KavaFm/static/css/main.8cd0cec2.css",
+    "main.js": "/KavaFm/static/js/main.fc467a55.js",
+    "static/js/787.1819abfa.chunk.js": "/KavaFm/static/js/787.1819abfa.chunk.js",
+    "static/media/coffe.png": "/KavaFm/static/media/coffe.4c42f8aabafcd53f86c7.png",
+    "static/media/slideImg1.png": "/KavaFm/static/media/slideImg1.2196729395d318cbdc9b.png",
+    "static/media/tea.png": "/KavaFm/static/media/tea.3211faec97e33cf68198.png",
+    "static/media/slideImg3.png": "/KavaFm/static/media/slideImg3.78a2707fbb2cf7ce774c.png",
+    "static/media/havaiian.png": "/KavaFm/static/media/havaiian.3c651a9f82be456f9e4f.png",
+    "static/media/frenchFries.png": "/KavaFm/static/media/frenchFries.1694e6bf01646d898e21.png",
+    "static/media/slideImg2.png": "/KavaFm/static/media/slideImg2.4a5f1b79fe51925bdc53.png",
+    "static/media/fanta.png": "/KavaFm/static/media/fanta.0617967100de26a725e9.png",
+    "static/media/fourSyra.png": "/KavaFm/static/media/fourSyra.b6dc660310534059e8bf.png",
+    "static/media/villagePotato.png": "/KavaFm/static/media/villagePotato.5b0f0cd7d4d36ed1e2ce.png",
+    "static/media/kavaLogo.png": "/KavaFm/static/media/kavaLogo.2c5a87f48376d005de88.png",
+    "static/media/lemonade.png": "/KavaFm/static/media/lemonade.20ee456eb09730df6581.png",
+    "static/media/vanileIceCream.png": "/KavaFm/static/media/vanileIceCream.2fe8710fe3597fd105b2.png",
+    "static/media/chocolateIceCream.png": "/KavaFm/static/media/chocolateIceCream.79b0b273c2e6fb760c89.png",
+    "static/media/sandwich.png": "/KavaFm/static/media/sandwich.2bdb87fbb49e9db62ec4.png",
+    "static/media/milkshake.png": "/KavaFm/static/media/milkshake.2774b61fb35c4b1881fa.png",
+    "static/media/cola.png": "/KavaFm/static/media/cola.0f22b04bae7c4918be4d.png",
+    "static/media/naggets.png": "/KavaFm/static/media/naggets.31ed3fa1d37ba99d5d1b.png",
+    "static/media/richKids.png": "/KavaFm/static/media/richKids.b4ea2b6bd585b1ddcee1.png",
+    "static/media/cezar.png": "/KavaFm/static/media/cezar.491f461f71621c81c2a2.png",
+    "static/media/bonAqua.png": "/KavaFm/static/media/bonAqua.30d16789b4f7c9a8c543.png",
+    "static/media/sprite.png": "/KavaFm/static/media/sprite.117f3fa7071b80fa7533.png",
+    "static/media/juiceGlass.png": "/KavaFm/static/media/juiceGlass.0c5fe7a266c113fca85b.png",
+    "index.html": "/KavaFm/index.html",
+    "main.8cd0cec2.css.map": "/KavaFm/static/css/main.8cd0cec2.css.map",
+    "main.fc467a55.js.map": "/KavaFm/static/js/main.fc467a55.js.map",
+    "787.1819abfa.chunk.js.map": "/KavaFm/static/js/787.1819abfa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8cd0cec2.css",
+    "static/js/main.fc467a55.js"
+  ]
+}
