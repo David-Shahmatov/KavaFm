@@ -1,0 +1,66 @@
+@import '../../variables';
+
+.burgerMenu {
+  padding: $container-padding;
+  font-family: 'Nunito';
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  &__logo {
+    width: 70px;
+  }
+
+  &__cross {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  &__phone {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 25px;
+    background-color: $main-color;
+    color: #000;
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+  }
+
+  &__icon {
+    width: 40px;
+  }
+}

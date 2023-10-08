@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { iceCreamImages } from '../../images';
-import cart from '../../images/cart.png';
-import plus from '../../images/plus.png';
-import minus from '../../images/minus.png';
-import styles from './IceCream.module.scss';
-import { useCart } from '../../context/CartContext';
-import Footer from '../../components/Footer/Footer';
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { iceCreamImages } from "../../images";
+import cart from "../../images/cart.png";
+import plus from "../../images/plus.png";
+import minus from "../../images/minus.png";
+import styles from "./IceCream.module.scss";
+import { useCart } from "../../context/CartContext";
+import Footer from "../../components/Footer/Footer";
 
 const IceCreamPage = ({ items }) => {
   const { id } = useParams();
-  const { addToCart, cartItems, removeFromCart, productCount, updateCartItemQuantity } = useCart();
+  const {
+    addToCart,
+    cartItems,
+    removeFromCart,
+    productCount,
+    updateCartItemQuantity,
+  } = useCart();
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const iceCream = items.find((item) => item.id === id);
@@ -82,7 +88,11 @@ const IceCreamPage = ({ items }) => {
         </p>
       </div>
       <div className={styles.iceCreamPage}>
-        <img className={styles.iceCreamPage__image} src={iceCreamImage} alt="" />
+        <img
+          className={styles.iceCreamPage__image}
+          src={iceCreamImage}
+          alt=""
+        />
         <div className={styles.infoBlock}>
           <p className={styles.infoBlock__title}>{iceCream.title}</p>
           <p className={styles.infoBlock__weight}>{iceCream.weight}</p>
@@ -119,13 +129,11 @@ const IceCreamPage = ({ items }) => {
               onClick={addMethod}
             />
           </div>
-          </div>
         </div>
+      </div>
       <Footer />
     </>
   );
 };
 
 export default IceCreamPage;
-
-

@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { saladsImages } from '../../images';
-import cart from '../../images/cart.png';
-import plus from '../../images/plus.png';
-import minus from '../../images/minus.png';
-import styles from './SaladPage.module.scss';
-import { useCart } from '../../context/CartContext';
-import Footer from '../../components/Footer/Footer';
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { saladsImages } from "../../images";
+import cart from "../../images/cart.png";
+import plus from "../../images/plus.png";
+import minus from "../../images/minus.png";
+import styles from "./SaladPage.module.scss";
+import { useCart } from "../../context/CartContext";
+import Footer from "../../components/Footer/Footer";
 
 const SaladPage = ({ items }) => {
   const { id } = useParams();
-  const { addToCart, cartItems, removeFromCart, productCount, updateCartItemQuantity } = useCart();
+  const {
+    addToCart,
+    cartItems,
+    removeFromCart,
+    productCount,
+    updateCartItemQuantity,
+  } = useCart();
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const salad = items.find((item) => item.id === id);
@@ -119,8 +125,8 @@ const SaladPage = ({ items }) => {
               onClick={addMethod}
             />
           </div>
-          </div>
         </div>
+      </div>
       <Footer />
     </>
   );

@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { sandwichImages } from '../../images';
-import cart from '../../images/cart.png';
-import plus from '../../images/plus.png';
-import minus from '../../images/minus.png';
-import styles from './SandwichPage.module.scss';
-import { useCart } from '../../context/CartContext';
-import Footer from '../../components/Footer/Footer';
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { sandwichImages } from "../../images";
+import cart from "../../images/cart.png";
+import plus from "../../images/plus.png";
+import minus from "../../images/minus.png";
+import styles from "./SandwichPage.module.scss";
+import { useCart } from "../../context/CartContext";
+import Footer from "../../components/Footer/Footer";
 
 const SandwichPage = ({ items }) => {
   const { id } = useParams();
-  const { addToCart, cartItems, removeFromCart, productCount, updateCartItemQuantity } = useCart();
+  const {
+    addToCart,
+    cartItems,
+    removeFromCart,
+    productCount,
+    updateCartItemQuantity,
+  } = useCart();
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const sandwich = items.find((item) => item.id === id);
@@ -74,15 +80,19 @@ const SandwichPage = ({ items }) => {
             Головна{" "}
           </Link>
           &gt;
-          <Link to="/salads" className={styles.ways__link}>
+          <Link to="/sandwiches" className={styles.ways__link}>
             {" "}
-            Салати{" "}
+            Седвічі{" "}
           </Link>
           &gt; {sandwich.title}
         </p>
       </div>
       <div className={styles.sandwichPage}>
-        <img className={styles.sandwichPage__image} src={sandwichImage} alt="" />
+        <img
+          className={styles.sandwichPage__image}
+          src={sandwichImage}
+          alt=""
+        />
         <div className={styles.infoBlock}>
           <p className={styles.infoBlock__title}>{sandwich.title}</p>
           <p className={styles.infoBlock__weight}>{sandwich.weight}</p>
@@ -119,8 +129,8 @@ const SandwichPage = ({ items }) => {
               onClick={addMethod}
             />
           </div>
-          </div>
         </div>
+      </div>
       <Footer />
     </>
   );

@@ -1,6 +1,11 @@
 @import '../../variables';
+@import '../../mixins';
 
 .cardItem {
+  @include onPhone {
+    width: 150px;
+    gap: 0;
+  }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,6 +26,11 @@
   }
 
   &__image {
+    @include onPhone {
+      width: 150px;
+      height: 150px;
+    }
+
     width: 200px;
     height: 220px;
   }
@@ -30,6 +40,9 @@
   }
 
   &__title {
+    @include onPhone {
+       font-size: 17px;
+    }
     font-size: 17px;
     color: #000;
   }
@@ -49,6 +62,10 @@
   }
 
   &__containerPrice {
+    @include onPhone {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
     display: flex;
     justify-content: space-between;
     font-weight: 600;
@@ -57,6 +74,9 @@
   }
 
   &__button {
+    @include onPhone {
+      padding: 10px 10px;
+    }
     font-family: 'Nunito';
     padding: 15px 25px;
     background-color: transparent;
@@ -91,18 +111,23 @@
   }
 }
 
-.inCart {
-  font-family: 'Nunito';
-  padding: 15px 25px;
-  background-color: $main-color;
-  border: 2px solid $main-color;
-  border-radius: 10px;
-  position: relative;
-  font-size: 20px;
-  cursor: pointer;
-}
+// .inCart {
+//   font-family: 'Nunito';
+//   padding: 15px 25px;
+//   background-color: $main-color;
+//   border: 2px solid $main-color;
+//   border-radius: 10px;
+//   position: relative;
+//   font-size: 20px;
+//   cursor: pointer;
+// }
 
 .counter {
+  @include onPhone {
+    width: 120px;
+    height: 30px;
+    padding: 10px 15px;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,11 +138,17 @@
   background-color: $main-color;
 
   &__icon {
+    @include onPhone {
+      width: 20px;
+    }
     width: 40px;
     cursor: pointer;
   }
 
   &__value {
+    @include onPhone {
+      font-size: 15px;
+    }
     font-size: 20px;
   }
 }

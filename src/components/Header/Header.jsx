@@ -5,9 +5,15 @@ import gps from '../../images/gps.png';
 import clock from '../../images/clock.png';
 import phone from '../../images/phone.png';
 import cart from '../../images/cart.png';
+import burgerMenu from '../../images/burgerMenu.png';
 import Navigation from '../Navigation/Navigation';
 
-const Header = () => {
+const Header = ({
+  setBurgerMenuSelected,
+  burgerMenuSelected
+}) => {
+  const handlerClick = (value) => setBurgerMenuSelected(!value);
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -47,8 +53,13 @@ const Header = () => {
           <p className={styles.cartTitle}>Кошик</p>
         </div>
         </Link>
+        <img 
+          src={burgerMenu}  
+          className={styles.burgerMenuIcon}  
+          onClick={() => handlerClick(burgerMenuSelected)} 
+        />
       </div>
-      <Navigation />
+      <Navigation className={styles.header__navigation}/>
     </div>
   )
 }

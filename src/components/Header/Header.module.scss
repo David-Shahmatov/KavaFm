@@ -1,4 +1,5 @@
 @import '../../variables';
+@import '../../mixins';
 
 .container {
   padding: $container-padding;
@@ -19,6 +20,10 @@
   font-family: 'Nunito', sans-serif;
 
   &__item {
+    @include onPhone {
+      display: none;
+    }
+
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -81,4 +86,11 @@
 
 .cartTitle {
   text-decoration: none;
+}
+
+.burgerMenuIcon {
+  display: none;
+  @include onPhone {
+    display: block;
+  }
 }

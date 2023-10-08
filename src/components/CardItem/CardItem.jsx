@@ -105,10 +105,9 @@ const CardItem = ({
             <div className={styles.cardItem__price}>Ціна:</div>
             <div className={styles.cardItem__priceValue}>{price} грн</div>
           </div>
-          {!itemInCart
-            ?
+          {!itemInCart ? (
             <button onClick={handleAddToCart} className={styles.cardItem__button}>В кошик</button>
-            :
+          ) : (
             <div className={styles.counter}>
               <img 
                 className={styles.counter__icon} 
@@ -124,6 +123,7 @@ const CardItem = ({
                 onClick={addMethod}
               />
             </div>
+          )
           }
         </div>
         </>

@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { pizzaImages } from '../../images';
-import cart from '../../images/cart.png';
-import plus from '../../images/plus.png';
-import minus from '../../images/minus.png';
-import styles from './PizzaPage.module.scss';
-import { useCart } from '../../context/CartContext';
-import Footer from '../../components/Footer/Footer';
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { pizzaImages } from "../../images";
+import cart from "../../images/cart.png";
+import plus from "../../images/plus.png";
+import minus from "../../images/minus.png";
+import styles from "./PizzaPage.module.scss";
+import { useCart } from "../../context/CartContext";
+import Footer from "../../components/Footer/Footer";
 
 const PizzaPage = ({ items }) => {
   const { id } = useParams();
-  const { addToCart, cartItems, removeFromCart, productCount, updateCartItemQuantity } = useCart();
+  const {
+    addToCart,
+    cartItems,
+    removeFromCart,
+    productCount,
+    updateCartItemQuantity,
+  } = useCart();
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const pizza = items.find((item) => item.id === id);
@@ -127,7 +133,8 @@ const PizzaPage = ({ items }) => {
                 <span className={styles.checklist__price}>20 грн</span>
               </li>
               <li className={styles.checklist__item}>
-                Шинка, салямі, бекон, куряче філе, ковбаски мисливські, салямі чоррізо, дор блю.
+                Шинка, салямі, бекон, куряче філе, ковбаски мисливські, салямі
+                чоррізо, дор блю.
                 <span className={styles.checklist__price}>25 грн</span>
               </li>
               <li className={styles.checklist__item}>
@@ -136,12 +143,11 @@ const PizzaPage = ({ items }) => {
               </li>
             </ul>
           </div>
-          </div>
         </div>
+      </div>
       <Footer />
     </>
   );
 };
 
 export default PizzaPage;
-

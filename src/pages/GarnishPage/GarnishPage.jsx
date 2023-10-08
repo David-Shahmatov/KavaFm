@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { garnishImages } from '../../images';
-import cart from '../../images/cart.png';
-import plus from '../../images/plus.png';
-import minus from '../../images/minus.png';
-import styles from './GarnishPage.module.scss';
-import { useCart } from '../../context/CartContext';
-import Footer from '../../components/Footer/Footer';
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { garnishImages } from "../../images";
+import cart from "../../images/cart.png";
+import plus from "../../images/plus.png";
+import minus from "../../images/minus.png";
+import styles from "./GarnishPage.module.scss";
+import { useCart } from "../../context/CartContext";
+import Footer from "../../components/Footer/Footer";
 
 const GarnishPage = ({ items }) => {
   const { id } = useParams();
-  const { addToCart, cartItems, removeFromCart, productCount, updateCartItemQuantity } = useCart();
+  const {
+    addToCart,
+    cartItems,
+    removeFromCart,
+    productCount,
+    updateCartItemQuantity,
+  } = useCart();
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const garnish = items.find((item) => item.id === id);
@@ -66,7 +72,6 @@ const GarnishPage = ({ items }) => {
     setCountOfProduct(productCount[id] || 1);
   }, [productCount, id]);
 
-
   return (
     <>
       <div className={styles.ways}>
@@ -121,7 +126,9 @@ const GarnishPage = ({ items }) => {
             />
           </div>
           <div className={styles.checklist}>
-            <p className={styles.checklist__title}>Додатки до гарніру: (50гр.)</p>
+            <p className={styles.checklist__title}>
+              Додатки до гарніру: (50гр.)
+            </p>
             <ul className={styles.checklist__list}>
               <li className={styles.checklist__item}>
                 Соус сирний
@@ -137,8 +144,8 @@ const GarnishPage = ({ items }) => {
               </li>
             </ul>
           </div>
-          </div>
         </div>
+      </div>
       <Footer />
     </>
   );
