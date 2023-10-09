@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './Footer.module.scss';
 import logo from '../../images/kavaLogo.png';
 import inst from '../../images/inst.png';
@@ -7,9 +7,9 @@ import facebook from '../../images/facebook.png';
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <a href="/">
+      <Link href="/">
         <img className={styles.footer__logo} src={logo} alt="" />
-      </a>
+      </Link>
       <div className={styles.footer__main}>
         <div className={styles.menu}>
           <p className={styles.menu__title}>Наше меню:</p>

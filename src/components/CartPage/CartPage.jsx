@@ -43,6 +43,7 @@ const CartPage = () => {
     cartItems.map((item) => {
       removeFromCart(item.id);
     });
+    setCommonSum(0)
   };
 
   return (

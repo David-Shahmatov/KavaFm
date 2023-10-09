@@ -3,11 +3,17 @@
 
 .container {
   @include onPhone {
-    padding: $container-padding-phone;
+    padding: 0 30px;
     margin-bottom: 0;
   }
   padding: $container-padding;
   margin-bottom: 30px;
+  background-color: #fff;
+
+  position: sticky;
+  right: 0;
+  top: 0;
+  z-index: 999;
 }
 
 .toogler {
@@ -80,7 +86,8 @@
 
 .cartBlock {
   @include onPhone {
-    display: none;
+    width: 100px;
+    height: 40px;
   }
   display: flex;
   justify-content: center;
