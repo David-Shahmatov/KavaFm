@@ -42,10 +42,6 @@ const DrinkPage = ({ items }) => {
     }
   };
 
-  const handleRemoveFromCart = () => {
-    removeFromCart(drink.id);
-  };
-
   const addMethod = () => {
     if (countOfProduct < 10) {
       setCountOfProduct((prevCount) => {

@@ -4,6 +4,7 @@
 .container {
   @include onPhone {
     padding: $container-padding-phone;
+    margin-bottom: 0;
   }
   padding: $container-padding;
   margin-bottom: 30px;

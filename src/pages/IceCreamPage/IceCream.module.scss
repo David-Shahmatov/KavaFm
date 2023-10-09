@@ -1,5 +1,5 @@
-@import '../../variables';
-@import '../../mixins';
+@import "../../variables";
+@import "../../mixins";
 
 .ways {
   @include onPhone {
@@ -8,7 +8,7 @@
   padding: $container-padding;
   color: #6b6b6b;
   margin-bottom: 20px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 
   &__link {
     color: #6b6b6b;
@@ -24,13 +24,13 @@
   display: flex;
   align-items: center;
   padding: $container-padding;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   gap: 50px;
 
   &__image {
     @include onPhone {
-      width: 400px;
-      height: 400px;
+      width: 300px;
+      height: 300px;
     }
     width: 500px;
     height: 500px;
@@ -40,11 +40,10 @@
 .infoBlock {
   @include onPhone {
     gap: 10px;
+    padding: $container-padding-phone;
   }
   display: flex;
   flex-direction: column;
-  height: 500px;
-  width: 400px;
   gap: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -68,7 +67,6 @@
 .priceBlock {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
   padding-top: 20px;
 
   &__text {
@@ -84,7 +82,7 @@
 
 .counter {
   @include onPhone {
-    width: 400px;
+    width: 300px;
     padding: 5px;
   }
   display: flex;
@@ -108,7 +106,7 @@
 
 .cart {
   @include onPhone {
-    width: 400px;
+    width: 300px;
     padding: 5px;
   }
   display: flex;
@@ -121,15 +119,16 @@
   padding: 10px;
   color: $main-color;
   font-weight: bold;
-  transition: .5s;
+  transition: 0.5s;
   cursor: pointer;
 
   &:hover {
-    .cart__image, .cart__title {
+    .cart__image,
+    .cart__title {
       filter: brightness(0) invert(1);
     }
     background-color: $main-color;
-    transition: .5s;
+    transition: 0.5s;
   }
 
   &__title {

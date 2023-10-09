@@ -42,6 +42,9 @@
 }
 
 .checkout {
+  @include onPhone {
+    width: 290px;
+  }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,6 +56,9 @@
   padding: 15px;
 
   &__item {
+    @include onPhone {
+      font-size: 13px;
+    }
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -75,6 +81,11 @@
   }
 
   &__summary {
+    @include onPhone {
+      font-size: 20px;
+    }
+    display: flex;
+    justify-content: space-between;
     font-size: 23px;
   }
 
@@ -90,6 +101,7 @@
     background-color: transparent;
     border-radius: 10px;
     font-size: 15px;
+    color: #000;
     cursor: pointer;
 
     &_delivery {
@@ -115,6 +127,9 @@
 }
 
 .emptyCartPage {
+  @include onPhone {
+    padding: $container-padding-phone;
+  }
   display: flex;
   gap: 10px;
   align-items: center;
@@ -122,16 +137,25 @@
   font-family: 'Nunito', sans-serif;
 
   &__title {
+    @include onPhone {
+      font-size: 25px;
+    }
     font-size: 40px;
     color: #493900;
     margin-top: 20px;
   }
 
   &__subtitle {
+    @include onPhone {
+      font-size: 12px;
+    }
     color: #675209;
   }
 
   &__button {
+    @include onPhone {
+      padding: 10px;
+    }
     background-color: $main-color;
     color: #fff;
     padding: 15px;

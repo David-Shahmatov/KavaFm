@@ -15,6 +15,7 @@
     text-decoration: none;
   }
 }
+
 .garnishPage {
   @include onPhone {
     flex-direction: column;
@@ -28,8 +29,8 @@
 
   &__image {
     @include onPhone {
-      width: 400px;
-      height: 400px;
+      width: 300px;
+      height: 300px;
     }
     width: 500px;
     height: 500px;
@@ -39,11 +40,10 @@
 .infoBlock {
   @include onPhone {
     gap: 10px;
+    padding: $container-padding-phone;
   }
   display: flex;
   flex-direction: column;
-  height: 500px;
-  width: 500px;
   gap: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -67,7 +67,6 @@
 .priceBlock {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
   padding-top: 20px;
 
   &__text {
@@ -76,10 +75,6 @@
   }
 
   &__price {
-    // @include onPhone {
-    //   font-size: 20px;
-    // }
-
     font-size: 30px;
     font-weight: 500;
   }
@@ -87,9 +82,8 @@
 
 .counter {
   @include onPhone {
-    width: 400px;
+    width: 300px;
     padding: 5px;
-    margin-bottom: 30px;
   }
   display: flex;
   align-items: center;
@@ -112,9 +106,8 @@
 
 .cart {
   @include onPhone {
-    width: 400px;
+    width: 300px;
     padding: 5px;
-    margin-bottom: 30px;
   }
   display: flex;
   align-items: center;
@@ -151,23 +144,19 @@
   }
 
   &__title {
+    @include onPhone {
+      font-size: 20px;
+    }
     font-weight: 500;
     font-size: 30px;
   }
 
   &__item {
+    @include onPhone {
+      font-size: 15px;
+    }
     margin-bottom: 10px;
     position: relative;
-
-    &::before {
-      content: "\2022";
-      color: #efb729;
-      font-size: 20px;
-      font-weight: bold;
-      position: absolute;
-      left: -20px;
-      top: 2px;
-    }
   }
 
   &__price {

@@ -4,6 +4,7 @@ import styles from "./CartPage.module.scss";
 import attention from "../../images/attention.png";
 import CartItem from "../CartItem/CartItem";
 import { Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 const CartPage = () => {
   const { cartItems, removeFromCart } = useCart();
@@ -49,9 +50,9 @@ const CartPage = () => {
       {cartItems.length === 0 ? (
         <div className={styles.emptyCartPage}>
           <div class={styles.customLoader}></div>
-          <p className={styles.emptyCartPage__title}>Уппс, у вас пусто!</p>
+          <p className={styles.emptyCartPage__title}>Уппс, у вас порожньо!</p>
           <p className={styles.emptyCartPage__subtitle}>
-            Ваша корзина пуста , додайте щось з меню
+            Ваший кошик порожній , додайте щось з меню
           </p>
           <Link to="/" className={styles.emptyCartPage__button}>
             Перейти до меню
@@ -112,10 +113,8 @@ const CartPage = () => {
                 </div>
               )}
               <div className={styles.checkout__summary}>
-                <div className={styles.checkout__item}>
                   <p className={styles.checkout__key}>До сплати:</p>
                   <p className={styles.checkout__value}>{commonSum}₴</p>
-                </div>
               </div>
               <div className={styles.checkout__buttons}>
                 <button

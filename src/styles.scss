@@ -1,3 +1,6 @@
+@import './mixins';
+@import './variables';
+
 * {
   padding: 0;
   margin: 0;
@@ -10,4 +13,31 @@ html, body {
 
 p {
   display: inline;
+}
+
+.cartForMobile {
+  @include onPhone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    background-color: #fff;
+    font-family: 'Nunito';
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid $main-color;
+  }
+  display: none;
+
+  &__image {
+    width: 30px;
+  }
+  &__title {
+    color: #000;
+    font-size: 15px;
+  }
 }

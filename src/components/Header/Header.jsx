@@ -10,11 +10,14 @@ import Navigation from "../Navigation/Navigation";
 import { useCart } from "../../context/CartContext";
 import { useState, useEffect } from "react";
 
-const Header = ({ setBurgerMenuSelected, burgerMenuSelected }) => {
+const Header = ({ 
+  setBurgerMenuSelected, 
+  burgerMenuSelected
+}) => {
   const { cartItems } = useCart();
   const [commonSum, setCommonSum] = useState(0);
 
-  const handlerClick = (value) => setBurgerMenuSelected(!value);
+  const handlerClickForBurgerMenu = (value) => setBurgerMenuSelected(!value);
 
   useEffect(() => {
     let sum = 0;
@@ -85,7 +88,7 @@ const Header = ({ setBurgerMenuSelected, burgerMenuSelected }) => {
         <img
           src={burgerMenu}
           className={styles.burgerMenuIcon}
-          onClick={() => handlerClick(burgerMenuSelected)}
+          onClick={() => handlerClickForBurgerMenu(burgerMenuSelected)}
         />
       </div>
       <Navigation className={styles.header__navigation} />
