@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { CartProvider } from './context/CartContext';
 
 ReactDOM.render(
-  <Router>
+  <Router basename='/KavaFm'>
     <React.StrictMode>
       <CartProvider>
         <App />

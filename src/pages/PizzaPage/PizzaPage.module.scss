@@ -76,10 +76,6 @@
   }
 
   &__price {
-    // @include onPhone {
-    //   font-size: 20px;
-    // }
-
     font-size: 30px;
     font-weight: 500;
   }
@@ -95,8 +91,7 @@
   align-items: center;
   justify-content: space-between;
   width: 400px;
-  height: 50px;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   background-color: $main-color;
 
