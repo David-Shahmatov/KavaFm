@@ -66,7 +66,7 @@ const CartPage = () => {
             Очистити кошик
           </p>
           <div className={styles.cartPage__content}>
-            <div className={styles.cartPage__list}>
+            {/* <div className={styles.cartPage__list}> */}
               {cartItems.map((item) => (
                 <CartItem
                   key={item.id}
@@ -80,7 +80,7 @@ const CartPage = () => {
                   type={item.type}
                 />
               ))}
-            </div>
+            {/* </div> */}
             <div className={styles.checkout}>
               <div className={styles.checkout__positions}>
                 <div className={styles.checkout__item}>
