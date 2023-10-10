@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/KavaFm/static/css/main.e278ab60.css",
-    "main.js": "/KavaFm/static/js/main.f7aab6a1.js",
+    "main.css": "/KavaFm/static/css/main.e63fae29.css",
+    "main.js": "/KavaFm/static/js/main.1b2c2188.js",
     "static/js/787.1819abfa.chunk.js": "/KavaFm/static/js/787.1819abfa.chunk.js",
     "static/media/coffe.png": "/KavaFm/static/media/coffe.4c42f8aabafcd53f86c7.png",
     "static/media/slideImg1.png": "/KavaFm/static/media/slideImg1.2196729395d318cbdc9b.png",
@@ -27,12 +27,12 @@
     "static/media/sprite.png": "/KavaFm/static/media/sprite.117f3fa7071b80fa7533.png",
     "static/media/juiceGlass.png": "/KavaFm/static/media/juiceGlass.0c5fe7a266c113fca85b.png",
     "index.html": "/KavaFm/index.html",
-    "main.e278ab60.css.map": "/KavaFm/static/css/main.e278ab60.css.map",
-    "main.f7aab6a1.js.map": "/KavaFm/static/js/main.f7aab6a1.js.map",
+    "main.e63fae29.css.map": "/KavaFm/static/css/main.e63fae29.css.map",
+    "main.1b2c2188.js.map": "/KavaFm/static/js/main.1b2c2188.js.map",
     "787.1819abfa.chunk.js.map": "/KavaFm/static/js/787.1819abfa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e278ab60.css",
-    "static/js/main.f7aab6a1.js"
+    "static/css/main.e63fae29.css",
+    "static/js/main.1b2c2188.js"
   ]
 }
