@@ -5,6 +5,10 @@
   @include onPhone {
     padding: $container-padding-phone;
   }
+
+  @include onTablet {
+    padding: $container-padding-tablet;
+  }
   padding: $container-padding;
   color: #6b6b6b;
   margin-bottom: 20px;
@@ -21,6 +25,11 @@
     flex-direction: column;
     padding: $container-padding-phone;
   }
+
+  @include onTablet{
+    padding: $container-padding-tablet;
+    gap: 30px;
+  }
   display: flex;
   align-items: center;
   padding: $container-padding;
@@ -29,6 +38,11 @@
 
   &__image {
     @include onPhone {
+      width: 300px;
+      height: 300px;
+    }
+
+    @include onTablet {
       width: 300px;
       height: 300px;
     }
@@ -42,6 +56,10 @@
     gap: 10px;
     padding: $container-padding-phone;
   }
+  @include onTablet {
+    gap: 15px;
+    padding: $container-padding-phone;
+  }
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -52,6 +70,10 @@
     @include onPhone {
       font-size: 25px;
     }
+    @include onTablet {
+      font-size: 30px;
+    }
+
     font-size: 40px;
   }
 
@@ -59,6 +81,10 @@
     @include onPhone {
       font-size: 15px;
     }
+    @include onTablet {
+      font-size: 15px;
+    }
+
     color: #797572;
     font-size: 20px;
   }
@@ -70,11 +96,19 @@
   padding-top: 20px;
 
   &__text {
+    @include onTablet {
+      font-size: 25px;
+    }
+
     font-size: 30px;
     font-weight: 500;
   }
 
   &__price {
+    @include onTablet {
+      font-size: 25px;
+    }
+
     font-size: 30px;
     font-weight: 500;
   }
@@ -82,6 +116,10 @@
 
 .counter {
   @include onPhone {
+    width: 300px;
+    padding: 5px;
+  }
+  @include onTablet {
     width: 300px;
     padding: 5px;
   }
@@ -106,6 +144,11 @@
 
 .cart {
   @include onPhone {
+    width: 300px;
+    padding: 5px;
+  }
+  
+  @include onTablet {
     width: 300px;
     padding: 5px;
   }

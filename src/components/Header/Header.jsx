@@ -81,6 +81,8 @@ const Header = ({
             }}
           >
             <div className={`${styles.header__item} ${styles.cartBlock}`}>
+            <img src={cart} alt="" className={styles.cart} />
+
               <p className={styles.cartTitle}>{commonSum}₴</p>
             </div>
           </Link>

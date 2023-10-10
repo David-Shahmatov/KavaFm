@@ -4,8 +4,12 @@
 .cartItem {
   @include onPhone {
     height: 50px;
-    // width: 300px;
     width: 100%;
+  }
+  @include onTablet {
+    height: 70px;
+    width: 100%;
+    // gap: 5px;
   }
   height: 100px;
   width: 700px;
@@ -33,12 +37,18 @@
     @include onPhone {
       font-size: 10px;
     }
+    @include onTablet {
+      font-size: 15px;
+    }
     font-size: 20px;
   }
 
   &__removeButton {
     @include onPhone {
       height: 20px;
+    }
+    @include onTablet {
+      height: 25px;
     }
     height: 30px;
     cursor: pointer;
@@ -54,6 +64,9 @@
     @include onPhone {
       height: 50px;
     }
+    @include onTablet {
+      height: 70px;
+    }
     height: 100px;
   }
 
@@ -61,12 +74,18 @@
     @include onPhone {
       font-size: 10px;
     }
+    @include onTablet {
+      font-size: 12px;
+    }
     color: #696969;
   }
 
   &__price {
     @include onPhone {
       font-size: 15px;
+    }
+    @include onTablet {
+      font-size: 17px;
     }
     font-size: 20px;
   }
@@ -78,6 +97,12 @@
     height: 20px;
     padding: 5px;
   }
+
+  @include onTablet{
+    width: 100px;
+    height: 25px;
+    padding: 5px;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -85,11 +110,15 @@
   height: 30px;
   padding: 10px;
   border-radius: 30px;
-  background-color: #e9e8e7;
+  background-color: #f2ecd7;
 
   &__icon {
     @include onPhone {
       width: 17px;
+    }
+
+    @include onTablet {
+      width: 25px;
     }
     width: 40px;
     cursor: pointer;
@@ -98,6 +127,10 @@
   &__value {
     @include onPhone {
       font-size: 10px;
+    }
+
+    @include onTablet {
+      font-size: 15px;
     }
     font-size: 20px;
   }

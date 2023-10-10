@@ -3,9 +3,10 @@
 
 .cartPage {
   @include onPhone {
-    // width: 100%;
     padding: $container-padding-phone;
-    // padding: 0;
+  }
+  @include onTablet {
+    padding: $container-padding-tablet;
   }
   display: flex;
   flex-direction: column;
@@ -29,6 +30,9 @@
     @include onPhone {
       font-size: 30px;
     }
+    @include onTablet {
+      font-size: 30px;
+    }
     font-size: 40px;
     margin-bottom: 20px;
   }
@@ -36,7 +40,6 @@
   &__content {
     @include onPhone {
       flex-direction: column;
-      // width: 100%;
       padding-left: 0;
       padding-right: 30px;
       padding-top: 10px;
@@ -46,17 +49,17 @@
     display: flex;
     justify-content: space-between;
   }
-
-  // &__list {
-  //   @include onPhone {
-  //     width: 100%;
-  //   }
-  // }
 }
 
 .checkout {
   @include onPhone {
     width: 100%;
+    padding: 10px;
+  }
+
+  @include onTablet {
+    width: 250px;
+    height: 130px;
     padding: 10px;
   }
   display: flex;
@@ -71,6 +74,9 @@
 
   &__item {
     @include onPhone {
+      font-size: 13px;
+    }
+    @include onTablet{
       font-size: 13px;
     }
     display: flex;
@@ -98,6 +104,10 @@
     @include onPhone {
       font-size: 20px;
     }
+
+    @include onTablet {
+      font-size: 17px;
+    }
     display: flex;
     justify-content: space-between;
     font-size: 23px;
@@ -109,6 +119,11 @@
   }
 
   &__button {
+    @include onTablet {
+      width: 100px;
+      padding: 7px;
+      font-size: 13px;
+    }
     width: 120px;
     padding: 10px;
     border: 2px solid $main-color;
@@ -143,6 +158,9 @@
 .emptyCartPage {
   @include onPhone {
     padding: $container-padding-phone;
+  }
+  @include onTablet {
+    padding: $container-padding-tablet;
   }
   display: flex;
   gap: 10px;

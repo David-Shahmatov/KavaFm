@@ -1,18 +1,19 @@
 @import '../../variables';
 @import '../../mixins';
 
-// .link {
-//   padding: $container-padding;
-// }
-
 .ways {
   @include onPhone {
     padding: $container-padding-phone;
+  }
+
+  @include onTablet {
+    padding: $container-padding-tablet;
   }
   padding: $container-padding;
   color: #6b6b6b;
   margin-bottom: 20px;
   font-family: 'Nunito', sans-serif;
+  transition: .3s;
 
   &__link {
     color: #6b6b6b;
@@ -24,6 +25,12 @@
   @include onPhone {
     padding: $container-padding-phone;
     grid-template-columns: repeat(2, auto);
+    gap: 15px;
+  }
+
+  @include onTablet {
+    padding: $container-padding-tablet;
+    grid-template-columns: repeat(3, auto);
     gap: 15px;
   }
 

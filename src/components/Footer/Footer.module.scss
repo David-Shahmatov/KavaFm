@@ -6,6 +6,12 @@
     flex-direction: column;
     padding: $container-padding-phone;
   }
+
+  @include onTablet {
+    flex-direction: column;
+    padding: $container-padding-tablet;
+    gap: 10px;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,13 +54,22 @@
     @include onPhone {
       font-size: 15px;
     }
+    @include onTablet{
+      font-size: 20px;
+      margin: 0;
+    }
     font-size: 25px;
     margin-bottom: 20px;
   }
   
   &__contactsNumber {
     @include onPhone {
-      font-size: 15px;
+      font-size: 25px;
+      margin: 0;
+    }
+
+    @include onTablet {
+      font-size: 25px;
       margin: 0;
     }
     text-decoration: none;
@@ -78,6 +93,11 @@
     align-items: flex-start;
     gap: 20px;
   }
+  @include onTablet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
   display: flex;
   align-items: center;
 
@@ -96,6 +116,10 @@
   &__item {
     @include onPhone {
       font-size: 13px;
+    }
+
+    @include onTablet {
+      font-size: 17px;
     }
     list-style: none;
     font-size: 15px;
