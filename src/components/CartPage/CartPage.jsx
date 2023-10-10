@@ -61,9 +61,9 @@ const CartPage = () => {
         </div>
       ) : (
         <div className={styles.cartPage}>
-          <p className={styles.cartPage__title}>Ваша корзина</p>
+          <p className={styles.cartPage__title}>Ваший кошик</p>
           <p className={styles.cartPage__button} onClick={clearCart}>
-            Очистити корзину
+            Очистити кошик
           </p>
           <div className={styles.cartPage__content}>
             <div className={styles.cartPage__list}>

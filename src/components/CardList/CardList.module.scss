@@ -24,6 +24,7 @@
   @include onPhone {
     padding: $container-padding-phone;
     grid-template-columns: repeat(2, auto);
+    gap: 15px;
   }
 
   display: grid;

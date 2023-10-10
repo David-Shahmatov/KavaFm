@@ -7,7 +7,7 @@ import facebook from '../../images/facebook.png';
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <Link href="/">
+      <Link to="/">
         <img className={styles.footer__logo} src={logo} alt="" />
       </Link>
       <div className={styles.footer__main}>
