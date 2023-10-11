@@ -42,10 +42,6 @@ const SandwichPage = ({ items }) => {
     }
   };
 
-  const handleRemoveFromCart = () => {
-    removeFromCart(sandwich.id);
-  };
-
   const addMethod = () => {
     if (countOfProduct < 10) {
       setCountOfProduct((prevCount) => {
@@ -82,7 +78,7 @@ const SandwichPage = ({ items }) => {
           &gt;
           <Link to="/sandwiches" className={styles.ways__link}>
             {" "}
-            Седвічі{" "}
+            Сендвічі{" "}
           </Link>
           &gt; {sandwich.title}
         </p>
