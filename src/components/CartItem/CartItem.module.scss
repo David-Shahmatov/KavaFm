@@ -4,7 +4,7 @@
 .cartItem {
   @include onPhone {
     height: 50px;
-    width: 100%;
+    width: calc(100% - 30px);
   }
   @include onTablet {
     height: 70px;
