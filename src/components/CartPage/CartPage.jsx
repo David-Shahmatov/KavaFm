@@ -43,7 +43,7 @@ const CartPage = () => {
     cartItems.map((item) => {
       removeFromCart(item.id);
     });
-    setCommonSum(0)
+    setCommonSum(0);
   };
 
   return (
@@ -114,8 +114,8 @@ const CartPage = () => {
                 </div>
               )}
               <div className={styles.checkout__summary}>
-                  <p className={styles.checkout__key}>До сплати:</p>
-                  <p className={styles.checkout__value}>{commonSum}₴</p>
+                <p className={styles.checkout__key}>До сплати:</p>
+                <p className={styles.checkout__value}>{commonSum}₴</p>
               </div>
               <div className={styles.checkout__buttons}>
                 <button
