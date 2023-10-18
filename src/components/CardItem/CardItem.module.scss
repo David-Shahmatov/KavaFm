@@ -63,6 +63,13 @@
     }
     font-size: 17px;
     color: #000;
+    text-decoration: none;
+    transition: .2s;
+
+    &:hover {
+      color: $main-color;
+      transition: .2s;
+    }
   }
 
   &__ingredients {

@@ -60,9 +60,9 @@ const CartPage = () => {
           <p className={styles.emptyCartPage__subtitle}>
             Ваший кошик порожній , додайте щось з меню
           </p>
-          <Link to="/" className={styles.emptyCartPage__button}>
-            Перейти до меню
-          </Link>
+          <p onClick={handleGoBack} className={styles.emptyCartPage__button}>
+            Повернутись назад
+          </p>
         </div>
       ) : (
         <div className={styles.cartPage}>

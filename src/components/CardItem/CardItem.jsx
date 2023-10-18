@@ -107,7 +107,7 @@ const CardItem = ({
           />
         </Link>
         <p className={styles.cardItem__weight}>{weight}</p>
-        <p className={styles.cardItem__title}>{title}</p>
+          <Link to={path} className={styles.cardItem__title}>{title}</Link>
         <p className={styles.cardItem__ingredients}>{ingredients}</p>
         <div className={styles.cardItem__containerPrice}>
           <div className={styles.cardItem__price}>Ціна:</div>
