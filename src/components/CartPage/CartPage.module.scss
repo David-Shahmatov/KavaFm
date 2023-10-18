@@ -52,9 +52,27 @@
     padding-top: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // margin: 0 auto;
     gap: 70px;
     justify-items: center;
+  }
+}
+
+.goBackBlock {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: .3s;
+
+  &__text {
+    color: $main-color;
+  }
+
+  &:hover {
+    filter: brightness(70%);
+    transition: .3s;
   }
 }
 

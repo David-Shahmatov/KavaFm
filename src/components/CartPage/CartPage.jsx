@@ -2,13 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useCart } from "../../context/CartContext";
 import styles from "./CartPage.module.scss";
 import attention from "../../images/attention.png";
+import arrowLeft from "../../images/arrowLeft.png";
 import CartItem from "../CartItem/CartItem";
-import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer";
+import { Link, useNavigate } from "react-router-dom";
 
 const CartPage = () => {
   const { cartItems, removeFromCart } = useCart();
   const [commonSum, setCommonSum] = useState(0);
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1)
+  };
 
   const pluralizePositions = (count) => {
     const lastTwoDigits = count % 100;
@@ -62,6 +67,10 @@ const CartPage = () => {
       ) : (
         <div className={styles.cartPage}>
           <p className={styles.cartPage__title}>Ваший кошик</p>
+          <div className={styles.goBackBlock} onClick={handleGoBack}>
+            <img src={arrowLeft} className={styles.goBackBlock__arrow}/>
+            <p className={styles.goBackBlock__text}>Назад</p>
+          </div>
           <p className={styles.cartPage__button} onClick={clearCart}>
             Очистити кошик
           </p>
