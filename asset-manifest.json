@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/KavaFm/static/css/main.757924db.css",
+    "main.css": "/KavaFm/static/css/main.adbb23a1.css",
     "main.js": "/KavaFm/static/js/main.c56bc674.js",
     "static/js/787.1819abfa.chunk.js": "/KavaFm/static/js/787.1819abfa.chunk.js",
     "static/media/coffe.png": "/KavaFm/static/media/coffe.4c42f8aabafcd53f86c7.png",
@@ -27,12 +27,12 @@
     "static/media/sprite.png": "/KavaFm/static/media/sprite.117f3fa7071b80fa7533.png",
     "static/media/juiceGlass.png": "/KavaFm/static/media/juiceGlass.0c5fe7a266c113fca85b.png",
     "index.html": "/KavaFm/index.html",
-    "main.757924db.css.map": "/KavaFm/static/css/main.757924db.css.map",
+    "main.adbb23a1.css.map": "/KavaFm/static/css/main.adbb23a1.css.map",
     "main.c56bc674.js.map": "/KavaFm/static/js/main.c56bc674.js.map",
     "787.1819abfa.chunk.js.map": "/KavaFm/static/js/787.1819abfa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.757924db.css",
+    "static/css/main.adbb23a1.css",
     "static/js/main.c56bc674.js"
   ]
 }
