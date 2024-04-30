@@ -17,9 +17,15 @@ const DrinkPage = ({ items }) => {
     productCount,
     updateCartItemQuantity,
   } = useCart();
+
+  // if (!id) {
+  //   return <div>Error!</div>;
+  // }
+  
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const drink = items.find((item) => item.id === id);
+
   const drinkPrice = drink.price;
   const drinkImage = drinkImages[drink.image];
   const totalDrinkPrice = drinkPrice * countOfProduct;
@@ -67,6 +73,10 @@ const DrinkPage = ({ items }) => {
   useEffect(() => {
     setCountOfProduct(productCount[id] || 1);
   }, [productCount, id]);
+
+  if (!drink) {
+    return <div>Щось пішло не так. Товар не знайдено 😔</div>;
+  }
 
   return (
     <>

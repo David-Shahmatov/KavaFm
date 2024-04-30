@@ -5,6 +5,7 @@ import attention from "../../images/attention.png";
 import arrowLeft from "../../images/arrowLeft.png";
 import CartItem from "../CartItem/CartItem";
 import { Link, useNavigate } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 const CartPage = () => {
   const { cartItems, removeFromCart } = useCart();
@@ -55,7 +56,7 @@ const CartPage = () => {
     <>
       {cartItems.length === 0 ? (
         <div className={styles.emptyCartPage}>
-          <div class={styles.customLoader}></div>
+          <div className={styles.customLoader}></div>
           <p className={styles.emptyCartPage__title}>Уппс, у вас порожньо!</p>
           <p className={styles.emptyCartPage__subtitle}>
             Ваший кошик порожній , додайте щось з меню
@@ -83,7 +84,7 @@ const CartPage = () => {
                   weight={item.weight}
                   image={item.image}
                   price={item.price}
-                  priceWithAdds={item.priceWithAdds}
+                  // priceWithAdds={item.priceWithAdds}
                   id={item.id}
                   quantity={item.quantity}
                   type={item.type}

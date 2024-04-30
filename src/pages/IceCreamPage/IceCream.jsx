@@ -10,6 +10,9 @@ import Footer from "../../components/Footer/Footer";
 
 const IceCreamPage = ({ items }) => {
   const { id } = useParams();
+  // if (!id) {
+  //   return <div>Error!</div>
+  // }
   const {
     addToCart,
     cartItems,
@@ -20,6 +23,11 @@ const IceCreamPage = ({ items }) => {
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const iceCream = items.find((item) => item.id === id);
+
+  // if (!iceCream) {
+  //   return <div>Error!</div>
+  // }
+
   const iceCreamPrice = iceCream.price;
   const iceCreamImage = iceCreamImages[iceCream.image];
   const totalIceCreamPrice = iceCreamPrice * countOfProduct;
@@ -40,10 +48,6 @@ const IceCreamPage = ({ items }) => {
     } else {
       updateCartItemQuantity(id, countOfProduct);
     }
-  };
-
-  const handleRemoveFromCart = () => {
-    removeFromCart(iceCream.id);
   };
 
   const addMethod = () => {

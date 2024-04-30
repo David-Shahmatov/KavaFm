@@ -10,6 +10,11 @@ import Footer from "../../components/Footer/Footer";
 
 const GarnishPage = ({ items }) => {
   const { id } = useParams();
+
+  // if (!id) {
+  //   return <div>Error!</div>;
+  // }
+
   const {
     addToCart,
     cartItems,
@@ -20,6 +25,7 @@ const GarnishPage = ({ items }) => {
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const garnish = items.find((item) => item.id === id);
+
   const garnishPrice = garnish.price;
   const garnishImage = garnishImages[garnish.image];
   const totalGarnishPrice = garnishPrice * countOfProduct;
@@ -40,10 +46,6 @@ const GarnishPage = ({ items }) => {
     } else {
       updateCartItemQuantity(id, countOfProduct);
     }
-  };
-
-  const handleRemoveFromCart = () => {
-    removeFromCart(garnish.id);
   };
 
   const addMethod = () => {
@@ -71,6 +73,10 @@ const GarnishPage = ({ items }) => {
   useEffect(() => {
     setCountOfProduct(productCount[id] || 1);
   }, [productCount, id]);
+
+  if (!garnish) {
+    return <div>Error!</div>;
+  }
 
   return (
     <>

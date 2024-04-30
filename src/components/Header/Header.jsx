@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 import logo from "../../images/kavaLogo.png";
@@ -93,7 +94,9 @@ const Header = ({
           onClick={() => handlerClickForBurgerMenu(burgerMenuSelected)}
         />
       </div>
-      <Navigation className={styles.header__navigation} />
+      <div className={styles.header__navigation}>
+        <Navigation />
+      </div>
     </div>
   );
 };

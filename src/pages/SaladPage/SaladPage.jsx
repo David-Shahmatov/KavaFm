@@ -10,6 +10,11 @@ import Footer from "../../components/Footer/Footer";
 
 const SaladPage = ({ items }) => {
   const { id } = useParams();
+
+  // if (!id) {
+  //   return <div className=""></div>
+  // }
+
   const {
     addToCart,
     cartItems,
@@ -20,6 +25,11 @@ const SaladPage = ({ items }) => {
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const salad = items.find((item) => item.id === id);
+
+  // if (!salad) {
+  //   return <div className=""></div>
+  // }
+  
   const saladPrice = salad.price;
   const saladImage = saladsImages[salad.image];
   const totalSaladPrice = saladPrice * countOfProduct;

@@ -10,6 +10,11 @@ import Footer from "../../components/Footer/Footer";
 
 const SandwichPage = ({ items }) => {
   const { id } = useParams();
+
+  // if (!id) {
+  //   return <div className=""></div>
+  // }
+
   const {
     addToCart,
     cartItems,
@@ -20,6 +25,11 @@ const SandwichPage = ({ items }) => {
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const sandwich = items.find((item) => item.id === id);
+
+  // if (!sandwich) {
+  //   return <div className=""></div>
+  // }
+  
   const sandwichPrice = sandwich.price;
   const sandwichImage = sandwichImages[sandwich.image];
   const totalSandwichPrice = sandwichPrice * countOfProduct;

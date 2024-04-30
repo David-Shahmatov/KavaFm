@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import styles from './CartItem.module.scss';
 import minus from '../../images/minus.png'

@@ -1,8 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import styles from './Footer.module.scss';
 import logo from '../../images/kavaLogo.png';
-import inst from '../../images/inst.png';
-import facebook from '../../images/facebook.png';
 
 const Footer = () => {
   return (
@@ -37,22 +35,6 @@ const Footer = () => {
         <div className={styles.footer__contacts}>
           <p className={styles.footer__contactsTitle}>Замовляйте те смачненьке, чого вам не вистачало! 😋</p>
           <a href="tel:+38 095 568 95 93" className={styles.footer__contactsNumber}>+38 095 568 95 93</a>
-          <div className={styles.socialNetworks}>
-            <a href="https://www.instagram.com/kava_fm_pizza/" target='_blanck'>
-              <img 
-                className={`${styles.socialNetworks__item} ${styles.socialNetworks__item_marginInst}`} 
-                src={inst} 
-                alt="instagramm" 
-              />
-            </a>
-            <a href="https://www.facebook.com/kavafm" target='_blanck'>
-              <img 
-                className={styles.socialNetworks__item}
-                src={facebook} 
-                alt="facebook" 
-              />
-            </a>
-          </div>
         </div>
         </div>
     </div>
