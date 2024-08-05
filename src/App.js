@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Main from "./components/Main/Main";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 import  Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 function App() {
   const [burgerMenuSelected, setBurgerMenuSelected] = useState(false);
 
@@ -20,6 +21,7 @@ function App() {
             burgerMenuSelected={burgerMenuSelected}
           />
           <Main />
+          <Footer />
         </>
       )}
     </div>

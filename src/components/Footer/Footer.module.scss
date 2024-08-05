@@ -5,12 +5,14 @@
   @include onPhone {
     flex-direction: column;
     padding: $container-padding-phone;
+    margin-top: 0;
   }
 
   @include onTablet {
     flex-direction: column;
     padding: $container-padding-tablet;
     gap: 10px;
+    margin-top: 0;
   }
   display: flex;
   align-items: center;
@@ -21,6 +23,7 @@
   background-color: #d7d7d7;
   font-family: 'Nunito';
   color: #272624;
+  margin-top: 15px;
 
   &__logo {
     @include onPhone {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './CartItem.module.scss';
 import minus from '../../images/minus.png'
 import plus from '../../images/plus.png'
@@ -12,11 +12,13 @@ import {
   iceCreamImages,
   drinkImages
 } from '../../images';
-import { useCart } from '../../context/CartContext';
+import { useDispatch, useSelector } from 'react-redux';
+import { actions } from '../../store/cart/cart.slice';
 
 const CartItem = ({ title, weight, image, price, id, quantity = 8, type }) => {
   const [countOfProduct, setCountOfProduct] = useState(quantity);
-  const { removeFromCart, updateCartItemQuantity, productCount } = useCart();
+  const {productCount} = useSelector(state => state.cartReducer);
+  const dispatch = useDispatch();
 
   let imageSource;
   switch (type) {
@@ -49,33 +51,30 @@ const CartItem = ({ title, weight, image, price, id, quantity = 8, type }) => {
   }
 
   const addMethod = () => {
-    setCountOfProduct((prevCount) => {
-      if (prevCount === 10) {
-        return prevCount;
-      }
-      const newCount = prevCount + 1;
-      updateCartItemQuantity(id, newCount);
-      return newCount;
-    });
-    productCount[id] = countOfProduct;
+    if (countOfProduct < 10) {
+      const newCount = countOfProduct + 1;
+      setCountOfProduct(newCount);
+      dispatch(actions.updateCartItemQuantity({ id, quantity: newCount }));
+    }
   };
 
   const subtractMethod = () => {
     if (countOfProduct > 1) {
-      setCountOfProduct((prevCount) => {
-        const newCount = prevCount - 1;
-        updateCartItemQuantity(id, newCount);
-        return newCount;
-      });
+      const newCount = countOfProduct - 1;
+      setCountOfProduct(newCount);
+      dispatch(actions.updateCartItemQuantity({ id, quantity: newCount }));
     } else {
-      removeFromCart(id);
+      dispatch(actions.removeFromCart(id));
     }
-    productCount[id] = countOfProduct - 1;
   };
 
   const removeItem = () => {
-    removeFromCart(id);
-  }
+    dispatch(actions.removeFromCart(id));
+  };
+
+  useEffect(() => {
+    setCountOfProduct(productCount[id] || 1);
+  }, [productCount, id]);
 
   const totalPrice = price * countOfProduct;
 

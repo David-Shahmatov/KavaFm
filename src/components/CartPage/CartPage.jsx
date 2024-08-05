@@ -1,152 +1,174 @@
 import React, { useState, useEffect } from "react";
-import { useCart } from "../../context/CartContext";
 import styles from "./CartPage.module.scss";
 import attention from "../../images/attention.png";
 import arrowLeft from "../../images/arrowLeft.png";
 import CartItem from "../CartItem/CartItem";
 import { Link, useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
+import { actions } from "../../store/cart/cart.slice";
+import { useDispatch, useSelector } from "react-redux";
 
 const CartPage = () => {
-  const { cartItems, removeFromCart } = useCart();
-  const [commonSum, setCommonSum] = useState(0);
-  const navigate = useNavigate();
+    const { cartItems } = useSelector((state) => state.cartReducer);
+    const dispatch = useDispatch();
+    const [commonSum, setCommonSum] = useState(0);
+    const navigate = useNavigate();
 
-  const handleGoBack = () => {
-    navigate(-1)
-  };
+    const handleGoBack = () => {
+        navigate(-1);
+    };
 
-  const pluralizePositions = (count) => {
-    const lastTwoDigits = count % 100;
-    const lastDigit = count % 10;
+    const pluralizePositions = (count) => {
+        const lastTwoDigits = count % 100;
+        const lastDigit = count % 10;
 
-    if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
-      return `${count} позицій`;
-    } else if (lastDigit === 1) {
-      return `${count} позиція`;
-    } else if (lastDigit >= 2 && lastDigit <= 4) {
-      return `${count} позиції`;
-    } else {
-      return `${count} позицій`;
-    }
-  };
+        if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+            return `${count} позицій`;
+        } else if (lastDigit === 1) {
+            return `${count} позиція`;
+        } else if (lastDigit >= 2 && lastDigit <= 4) {
+            return `${count} позиції`;
+        } else {
+            return `${count} позицій`;
+        }
+    };
 
-  let totalPositions = 0;
+    let totalPositions = 0;
 
-  for (const item of cartItems) {
-    totalPositions += item.quantity;
-  }
-
-  useEffect(() => {
-    let sum = 0;
     for (const item of cartItems) {
-      sum += item.price * item.quantity;
+        totalPositions += item.quantity;
     }
-    setCommonSum(sum);
-  }, [cartItems]);
 
-  const clearCart = () => {
-    cartItems.map((item) => {
-      removeFromCart(item.id);
-    });
-    setCommonSum(0);
-  };
+    useEffect(() => {
+        let sum = 0;
+        for (const item of cartItems) {
+            sum += item.price * item.quantity;
+        }
+        setCommonSum(sum);
+    }, [cartItems]);
 
-  return (
-    <>
-      {cartItems.length === 0 ? (
-        <div className={styles.emptyCartPage}>
-          <div className={styles.customLoader}></div>
-          <p className={styles.emptyCartPage__title}>Уппс, у вас порожньо!</p>
-          <p className={styles.emptyCartPage__subtitle}>
-            Ваший кошик порожній , додайте щось з меню
-          </p>
-          <p onClick={handleGoBack} className={styles.emptyCartPage__button}>
-            Повернутись назад
-          </p>
-        </div>
-      ) : (
-        <div className={styles.cartPage}>
-          <p className={styles.cartPage__title}>Ваший кошик</p>
-          <div className={styles.goBackBlock} onClick={handleGoBack}>
-            <img src={arrowLeft} className={styles.goBackBlock__arrow}/>
-            <p className={styles.goBackBlock__text}>Назад</p>
-          </div>
-          <p className={styles.cartPage__button} onClick={clearCart}>
-            Очистити кошик
-          </p>
-          <div className={styles.cartPage__content}>
-            <div className={styles.cartPage__list}>
-              {cartItems.map((item) => (
-                <CartItem
-                  key={item.id}
-                  title={item.title}
-                  weight={item.weight}
-                  image={item.image}
-                  price={item.price}
-                  // priceWithAdds={item.priceWithAdds}
-                  id={item.id}
-                  quantity={item.quantity}
-                  type={item.type}
-                />
-              ))}
-            </div>
-            <div className={styles.checkout}>
-              <div className={styles.checkout__positions}>
-                <div className={styles.checkout__item}>
-                  <p className={styles.checkout__key}>
-                    {`${pluralizePositions(totalPositions)} на сумму:`}
-                  </p>
-                  <p className={styles.checkout__value}>{`${commonSum}₴`}</p>
+    const clearCart = () => {
+        cartItems.map((item) => {
+            dispatch(actions.removeFromCart(item.id));
+        });
+        setCommonSum(0);
+    };
+
+    return (
+        <>
+            {cartItems.length === 0 ? (
+                <div className={styles.emptyCartPage}>
+                    <div className={styles.customLoader}></div>
+                    <p className={styles.emptyCartPage__title}>
+                        Уппс, у вас порожньо!
+                    </p>
+                    <p className={styles.emptyCartPage__subtitle}>
+                        Ваший кошик порожній , додайте щось з меню
+                    </p>
+                    <p
+                        onClick={handleGoBack}
+                        className={styles.emptyCartPage__button}
+                    >
+                        Повернутись назад
+                    </p>
                 </div>
-              </div>
-              {commonSum < 300 ? (
-                <div className={styles.checkout__attention}>
-                  <img
-                    src={attention}
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                    }}
-                  />
-                  <p style={{ fontSize: "15px" }}>
-                    {`Задля оформлення замовлення на доставку додайте ще на ${
-                      300 - commonSum
-                    } грн.`}
-                  </p>
+            ) : (
+                <div className={styles.cartPage}>
+                    <p className={styles.cartPage__title}>Ваший кошик</p>
+                    <div className={styles.goBackBlock} onClick={handleGoBack}>
+                        <img
+                            src={arrowLeft}
+                            className={styles.goBackBlock__arrow}
+                        />
+                        <p className={styles.goBackBlock__text}>Назад</p>
+                    </div>
+                    <p className={styles.cartPage__button} onClick={clearCart}>
+                        Очистити кошик
+                    </p>
+                    <div className={styles.cartPage__content}>
+                        <div className={styles.cartPage__list}>
+                            {cartItems.map((item) => (
+                                <CartItem
+                                    key={item.id}
+                                    title={item.title}
+                                    weight={item.weight}
+                                    image={item.image}
+                                    price={item.price}
+                                    // priceWithAdds={item.priceWithAdds}
+                                    id={item.id}
+                                    quantity={item.quantity}
+                                    type={item.type}
+                                />
+                            ))}
+                        </div>
+                        <div className={styles.checkout}>
+                            <div className={styles.checkout__positions}>
+                                <div className={styles.checkout__item}>
+                                    <p className={styles.checkout__key}>
+                                        {`${pluralizePositions(
+                                            totalPositions
+                                        )} на сумму:`}
+                                    </p>
+                                    <p
+                                        className={styles.checkout__value}
+                                    >{`${commonSum}₴`}</p>
+                                </div>
+                            </div>
+                            {commonSum < 300 ? (
+                                <div className={styles.checkout__attention}>
+                                    <img
+                                        src={attention}
+                                        style={{
+                                            width: "30px",
+                                            height: "30px",
+                                        }}
+                                    />
+                                    <p style={{ fontSize: "15px" }}>
+                                        {`Задля оформлення замовлення на доставку додайте ще на ${
+                                            300 - commonSum
+                                        } грн.`}
+                                    </p>
+                                </div>
+                            ) : (
+                                <div className={styles.checkout__delivery}>
+                                    <div className={styles.checkout__item}>
+                                        <p className={styles.checkout__key}>
+                                            Доставка:
+                                        </p>
+                                        <p className={styles.checkout__value}>
+                                            Безкоштовна
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
+                            <div className={styles.checkout__summary}>
+                                <p className={styles.checkout__key}>
+                                    До сплати:
+                                </p>
+                                <p className={styles.checkout__value}>
+                                    {commonSum}₴
+                                </p>
+                            </div>
+                            <div className={styles.checkout__buttons}>
+                                <button
+                                    className={`${styles.checkout__button} ${styles.checkout__button_selfPickup}`}
+                                >
+                                    Самовивіз
+                                </button>
+                                {commonSum >= 300 && (
+                                    <button
+                                        className={`${styles.checkout__button} ${styles.checkout__button_delivery}`}
+                                    >
+                                        Доставка
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              ) : (
-                <div className={styles.checkout__delivery}>
-                  <div className={styles.checkout__item}>
-                    <p className={styles.checkout__key}>Доставка:</p>
-                    <p className={styles.checkout__value}>Безкоштовна</p>
-                  </div>
-                </div>
-              )}
-              <div className={styles.checkout__summary}>
-                <p className={styles.checkout__key}>До сплати:</p>
-                <p className={styles.checkout__value}>{commonSum}₴</p>
-              </div>
-              <div className={styles.checkout__buttons}>
-                <button
-                  className={`${styles.checkout__button} ${styles.checkout__button_selfPickup}`}
-                >
-                  Самовивіз
-                </button>
-                {commonSum >= 300 && (
-                  <button
-                    className={`${styles.checkout__button} ${styles.checkout__button_delivery}`}
-                  >
-                    Доставка
-                  </button>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
-  );
+            )}
+        </>
+    );
 };
 
 export default CartPage;

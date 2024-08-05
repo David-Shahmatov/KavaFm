@@ -6,7 +6,6 @@ import plus from "../../images/plus.png";
 import minus from "../../images/minus.png";
 import styles from "./GarnishPage.module.scss";
 import { useCart } from "../../context/CartContext";
-import Footer from "../../components/Footer/Footer";
 
 const GarnishPage = ({ items }) => {
   const { id } = useParams();
@@ -149,7 +148,6 @@ const GarnishPage = ({ items }) => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

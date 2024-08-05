@@ -6,7 +6,6 @@ import plus from "../../images/plus.png";
 import minus from "../../images/minus.png";
 import styles from "./SaladPage.module.scss";
 import { useCart } from "../../context/CartContext";
-import Footer from "../../components/Footer/Footer";
 
 const SaladPage = ({ items }) => {
   const { id } = useParams();
@@ -134,7 +133,6 @@ const SaladPage = ({ items }) => {
             )}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

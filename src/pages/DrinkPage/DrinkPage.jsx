@@ -6,7 +6,6 @@ import plus from "../../images/plus.png";
 import minus from "../../images/minus.png";
 import styles from "./DrinkPage.module.scss";
 import { useCart } from "../../context/CartContext";
-import Footer from "../../components/Footer/Footer";
 
 const DrinkPage = ({ items }) => {
   const { id } = useParams();
@@ -17,10 +16,6 @@ const DrinkPage = ({ items }) => {
     productCount,
     updateCartItemQuantity,
   } = useCart();
-
-  // if (!id) {
-  //   return <div>Error!</div>;
-  // }
   
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
@@ -126,7 +121,6 @@ const DrinkPage = ({ items }) => {
             )}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

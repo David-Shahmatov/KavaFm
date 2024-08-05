@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './CardList.module.scss';
 import CardItem from '../CardItem/CardItem';
-import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
 
 const CardList = ({ items, typePage }) => {
@@ -36,7 +35,6 @@ const CardList = ({ items, typePage }) => {
           ))
         }
       </div>
-      <Footer />
     </>
   );
 }

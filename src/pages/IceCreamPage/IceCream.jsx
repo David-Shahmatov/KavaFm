@@ -6,13 +6,9 @@ import plus from "../../images/plus.png";
 import minus from "../../images/minus.png";
 import styles from "./IceCream.module.scss";
 import { useCart } from "../../context/CartContext";
-import Footer from "../../components/Footer/Footer";
 
 const IceCreamPage = ({ items }) => {
   const { id } = useParams();
-  // if (!id) {
-  //   return <div>Error!</div>
-  // }
   const {
     addToCart,
     cartItems,
@@ -23,10 +19,6 @@ const IceCreamPage = ({ items }) => {
   const [countOfProduct, setCountOfProduct] = useState(productCount[id] || 1);
 
   const iceCream = items.find((item) => item.id === id);
-
-  // if (!iceCream) {
-  //   return <div>Error!</div>
-  // }
 
   const iceCreamPrice = iceCream.price;
   const iceCreamImage = iceCreamImages[iceCream.image];
@@ -132,7 +124,6 @@ const IceCreamPage = ({ items }) => {
             )}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

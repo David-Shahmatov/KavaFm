@@ -7,7 +7,7 @@ import phone from "../../images/phone.png";
 import { Link, NavLink } from "react-router-dom";
 
 const BurgerMenu = ({ setBurgerMenuSelected, burgerMenuSelected }) => {
-    const handlerClick = (value) => setBurgerMenuSelected(!value);
+    const handlerClick = () => setBurgerMenuSelected(!burgerMenuSelected)
 
     return (
         <div className={styles.burgerMenu}>
