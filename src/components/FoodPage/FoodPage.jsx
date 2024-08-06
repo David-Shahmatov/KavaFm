@@ -12,21 +12,12 @@ import cart from "../../images/cart.png";
 import plus from "../../images/plus.png";
 import minus from "../../images/minus.png";
 import styles from "./FoodPage.module.scss";
-import { useCart } from "../../context/CartContext";
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../../store/cart/cart.slice";
 
 const FoodPage = ({ items }) => {
     const { id } = useParams();
     const location = useLocation();
-
-    // const {
-    //     addToCart,
-    //     cartItems,
-    //     removeFromCart,
-    //     productCount,
-    //     updateCartItemQuantity,
-    // } = useCart();
     const { cartItems, productCount } = useSelector(
         (state) => state.cartReducer
     );
