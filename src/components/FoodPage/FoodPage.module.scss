@@ -20,7 +20,7 @@
   }
 }
 
-.saladPage {
+.foodPage {
   @include onPhone {
     display: flex;
     flex-direction: column;
@@ -42,7 +42,6 @@
   max-width: 1200px;
   width: 100%;
   font-family: "Nunito", sans-serif;
-  // gap: 50px;
 
   &__image {
     @include onPhone {
@@ -188,5 +187,42 @@
 
   &__title {
     font-size: 20px;
+  }
+}
+
+.checklist {
+  max-width: 600px;
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 15px;
+  }
+
+  &__title {
+    @include onPhone {
+      font-size: 20px;
+    }
+    @include onTablet {
+      font-size: 20px;
+    }
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  &__item {
+    @include onPhone {
+      font-size: 15px;
+    }
+    @include onTablet {
+      font-size: 15px;
+    }
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  &__price {
+    float: right;
+    font-weight: bold;
+    color: #efb729;
   }
 }

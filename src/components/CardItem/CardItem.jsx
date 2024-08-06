@@ -13,6 +13,8 @@ import plus from "../../images/plus.png";
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../../store/cart/cart.slice";
 import styles from "./CardItem.module.scss";
+import Atropos from "atropos/react";
+import 'atropos/css';
 
 const CardItem = ({
     weight,
@@ -89,48 +91,50 @@ const CardItem = ({
     }, [productCount, id]);
 
     return (
-        <div className={styles.cardItem}>
-            <Link to={path}>
-                <img
-                    src={imageSource}
-                    className={styles.cardItem__image}
-                    alt={title}
-                />
-            </Link>
-            <p className={styles.cardItem__weight}>{weight}</p>
-            <Link to={path} className={styles.cardItem__title}>
-                {title}
-            </Link>
-            <p className={styles.cardItem__ingredients}>{ingredients}</p>
-            <div className={styles.cardItem__containerPrice}>
-                <div className={styles.cardItem__price}>Ціна:</div>
-                <div className={styles.cardItem__priceValue}>{price} грн</div>
-            </div>
-            {!itemInCart ? (
-                <button
-                    onClick={handleAddToCart}
-                    className={styles.cardItem__button}
-                >
-                    В кошик
-                </button>
-            ) : (
-                <div className={styles.counter}>
+        <Atropos shadow={false} className={styles.myAtropos}>
+            <div className={styles.cardItem}>
+                <Link to={path}>
                     <img
-                        className={styles.counter__icon}
-                        src={minus}
-                        alt="subtract"
-                        onClick={subtractMethod}
+                        src={imageSource}
+                        className={styles.cardItem__image}
+                        alt={title}
                     />
-                    <p className={styles.counter__value}>{productCount[id]}</p>
-                    <img
-                        className={styles.counter__icon}
-                        src={plus}
-                        alt="add"
-                        onClick={addMethod}
-                    />
+                </Link>
+                <p className={styles.cardItem__weight}>{weight}</p>
+                <Link to={path} className={styles.cardItem__title}>
+                    {title}
+                </Link>
+                <p className={styles.cardItem__ingredients}>{ingredients}</p>
+                <div className={styles.cardItem__containerPrice}>
+                    <div className={styles.cardItem__price}>Ціна:</div>
+                    <div className={styles.cardItem__priceValue}>{price} грн</div>
                 </div>
-            )}
-        </div>
+                {!itemInCart ? (
+                    <button
+                        onClick={handleAddToCart}
+                        className={styles.cardItem__button}
+                    >
+                        В кошик
+                    </button>
+                ) : (
+                    <div className={styles.counter}>
+                        <img
+                            className={styles.counter__icon}
+                            src={minus}
+                            alt="subtract"
+                            onClick={subtractMethod}
+                        />
+                        <p className={styles.counter__value}>{productCount[id]}</p>
+                        <img
+                            className={styles.counter__icon}
+                            src={plus}
+                            alt="add"
+                            onClick={addMethod}
+                        />
+                    </div>
+                )}
+            </div>
+        </Atropos>
     );
 };
 

@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./Main.scss";
 
 import Splide from "../Splide/Splide";
 import CardList from "../CardList/CardList";
 
-import PizzaPage from "../../pages/PizzaPage/PizzaPage";
-import GarnishPage from "../../pages/GarnishPage/GarnishPage";
-import SaladPage from "../../pages/SaladPage/SaladPage";
-import SandwichPage from "../../pages/SandwichPage/SandwichPage";
-import IceCreamPage from "../../pages/IceCreamPage/IceCream";
-import DrinkPage from "../../pages/DrinkPage/DrinkPage";
-
+import FoodPage from "../FoodPage/FoodPage";
 import mainPageData from "../../server/mainPageData.json";
 import pizzas from "../../server/pizzas.json";
 import garnish from "../../server/garnish.json";
@@ -38,7 +32,7 @@ const Main = () => {
     useEffect(() => {
         setTimeout(() => {
             setShowLoader(false);
-        }, 3000);
+        }, 1500);
     }, [false]);
 
     return (
@@ -58,7 +52,7 @@ const Main = () => {
                     />
                     <Route
                         path="/pizza/:id"
-                        element={<PizzaPage items={pizzas} />}
+                        element={<FoodPage items={pizzas} />}
                     />
                     <Route
                         path="/garnish"
@@ -66,7 +60,7 @@ const Main = () => {
                     />
                     <Route
                         path="/garnish/:id"
-                        element={<GarnishPage items={garnish} />}
+                        element={<FoodPage items={garnish} />}
                     />
                     <Route
                         path="/salads"
@@ -74,7 +68,7 @@ const Main = () => {
                     />
                     <Route
                         path="/salads/:id"
-                        element={<SaladPage items={salads} />}
+                        element={<FoodPage items={salads} />}
                     />
                     <Route
                         path="/sandwiches"
@@ -84,7 +78,7 @@ const Main = () => {
                     />
                     <Route
                         path="/sandwiches/:id"
-                        element={<SandwichPage items={sandwiches} />}
+                        element={<FoodPage items={sandwiches} />}
                     />
                     <Route
                         path="/ice-creams"
@@ -94,7 +88,7 @@ const Main = () => {
                     />
                     <Route
                         path="/ice-creams/:id"
-                        element={<IceCreamPage items={iceCreams} />}
+                        element={<FoodPage items={iceCreams} />}
                     />
                     <Route
                         path="/drinks"
@@ -102,7 +96,7 @@ const Main = () => {
                     />
                     <Route
                         path="/drinks/:id"
-                        element={<DrinkPage items={drinks} />}
+                        element={<FoodPage items={drinks} />}
                     />
                     <Route path="/cart" element={<CartPage />} />
                 </Routes>
