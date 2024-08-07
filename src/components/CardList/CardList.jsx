@@ -4,9 +4,6 @@ import CardItem from '../CardItem/CardItem';
 import { Link } from 'react-router-dom';
 
 const CardList = ({ items, typePage }) => {
-  if (typeof items === 'string') {
-    return <div>Ошибка: items не является массивом объектов Item.</div>;
-  }
   return (
     <>
       <div className={styles.ways}>

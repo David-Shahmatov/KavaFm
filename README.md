@@ -4,6 +4,7 @@
 - HTML
 - SASS
 - ReactJS
+- Redux Toolkit
 - React-Router
 - SplideJS
 

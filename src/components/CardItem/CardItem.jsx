@@ -12,9 +12,9 @@ import minus from "../../images/minus.png";
 import plus from "../../images/plus.png";
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../../store/cart/cart.slice";
+import 'atropos/css';
 import styles from "./CardItem.module.scss";
 import Atropos from "atropos/react";
-import 'atropos/css';
 
 const CardItem = ({
     weight,

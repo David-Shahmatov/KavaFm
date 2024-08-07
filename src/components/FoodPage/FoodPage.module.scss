@@ -2,227 +2,240 @@
 @import "../../mixins";
 
 .ways {
-  @include onPhone {
-    padding: $container-padding-phone;
-  }
+    @include onPhone {
+        padding: $container-padding-phone;
+    }
 
-  @include onTablet {
-    padding: $container-padding-tablet;
-  }
-  padding: $container-padding;
-  color: #6b6b6b;
-  margin-bottom: 20px;
-  font-family: "Nunito", sans-serif;
-
-  &__link {
+    @include onTablet {
+        padding: $container-padding-tablet;
+    }
+    padding: $container-padding;
     color: #6b6b6b;
-    text-decoration: none;
-  }
+    margin-bottom: 20px;
+    font-family: "Nunito", sans-serif;
+
+    &__link {
+        color: #6b6b6b;
+        text-decoration: none;
+    }
 }
 
 .foodPage {
-  @include onPhone {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 0;
-    padding: $container-padding-phone;
-  }
-
-  @include onTablet{
-    padding: $container-padding-tablet;
-    max-width: 650px;
-
-    gap: 30px;
-  }
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 100%;
-  font-family: "Nunito", sans-serif;
-
-  &__image {
     @include onPhone {
-      width: 300px;
-      height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 0;
+        padding: $container-padding-phone;
     }
 
     @include onTablet {
-      width: 350px;
-      height: 350px;
+        padding: $container-padding-tablet;
+        max-width: 650px;
+
+        gap: 30px;
     }
 
-    width: 450px;
-    height: 450px;
-  }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    font-family: "Nunito", sans-serif;
+
+    &__image {
+        @include onPhone {
+            width: 300px;
+            height: 300px;
+        }
+
+        @include onTablet {
+            width: 350px;
+            height: 350px;
+        }
+
+        width: 450px;
+        height: 450px;
+    }
+
+    &__desc {
+        color: #a39e9a;
+        font-size: 17px;
+        margin-bottom: 145px;
+    }
 }
 
 .infoBlock {
-  @include onPhone {
-    gap: 10px;
-    padding: $container-padding-phone;
-  }
-  @include onTablet {
-    gap: 15px;
-  }
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  &__title {
     @include onPhone {
-      font-size: 25px;
+        gap: 10px;
+        padding: $container-padding-phone;
     }
     @include onTablet {
-      font-size: 30px;
+        gap: 15px;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 600px;
+
+    &__ingredients {
+        max-width: 600px;
     }
 
-    font-size: 30px;
-  }
+    &__title {
+        @include onPhone {
+            font-size: 25px;
+        }
+        @include onTablet {
+            font-size: 30px;
+        }
 
-  &__weight {
-    @include onPhone {
-      font-size: 15px;
-    }
-    @include onTablet {
-      font-size: 15px;
+        font-size: 30px;
     }
 
-    color: #797572;
-    font-size: 17px;
-  }
+    &__weight {
+        @include onPhone {
+            font-size: 15px;
+        }
+        @include onTablet {
+            font-size: 15px;
+        }
+
+        color: #797572;
+        font-size: 17px;
+    }
 }
 
 .priceBlock {
-  @include onTablet {
-    max-width: 300px;
-  }
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  max-width: 400px;
-
-  &__text {
     @include onTablet {
-      font-size: 25px;
+        max-width: 300px;
+    }
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    max-width: 400px;
+
+    &__text {
+        @include onTablet {
+            font-size: 25px;
+        }
+
+        font-size: 30px;
+        font-weight: 500;
     }
 
-    font-size: 30px;
-    font-weight: 500;
-  }
+    &__price {
+        @include onTablet {
+            font-size: 25px;
+        }
 
-  &__price {
-    @include onTablet {
-      font-size: 25px;
+        font-size: 30px;
+        font-weight: 500;
     }
-
-    font-size: 30px;
-    font-weight: 500;
-  }
 }
 
 .counter {
-  @include onPhone {
-    width: 300px;
-    padding: 5px;
-  }
-  @include onTablet {
-    width: 300px;
-    padding: 5px;
-  }
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 400px;
-  height: 50px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: $main-color;
+    @include onPhone {
+        width: 300px;
+        padding: 5px;
+    }
+    @include onTablet {
+        width: 300px;
+        padding: 5px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $main-color;
 
-  &__icon {
-    width: 40px;
-    cursor: pointer;
-  }
+    &__icon {
+        width: 40px;
+        cursor: pointer;
+    }
 
-  &__value {
-    font-size: 20px;
-  }
+    &__value {
+        font-size: 20px;
+    }
 }
 
 .cart {
-  @include onPhone {
-    width: 300px;
-    padding: 5px;
-  }
-  
-  @include onTablet {
-    width: 300px;
-    padding: 5px;
-  }
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 400px;
-  gap: 10px;
-  border: 2px solid $main-color;
-  border-radius: 10px;
-  padding: 10px;
-  color: $main-color;
-  font-weight: bold;
-  transition: 0.5s;
-  cursor: pointer;
-
-  &:hover {
-    .cart__image,
-    .cart__title {
-      filter: brightness(0) invert(1);
+    @include onPhone {
+        width: 300px;
+        padding: 5px;
     }
-    background-color: $main-color;
-    transition: 0.5s;
-  }
 
-  &__title {
-    font-size: 20px;
-  }
+    @include onTablet {
+        width: 300px;
+        padding: 5px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    gap: 10px;
+    border: 2px solid $main-color;
+    border-radius: 10px;
+    padding: 10px;
+    color: $main-color;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        .cart__image,
+        .cart__title {
+            filter: brightness(0) invert(1);
+        }
+        background-color: $main-color;
+        transition: 0.5s;
+    }
+
+    &__title {
+        font-size: 20px;
+    }
 }
 
 .checklist {
-  max-width: 600px;
-  &__list {
-    list-style-type: none;
-    padding: 0;
-    padding-top: 15px;
-  }
+    max-width: 500px;
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        padding-top: 15px;
+    }
 
-  &__title {
-    @include onPhone {
-      font-size: 20px;
+    &__title {
+        @include onPhone {
+            font-size: 20px;
+        }
+        @include onTablet {
+            font-size: 20px;
+        }
+        font-weight: 500;
+        font-size: 30px;
     }
-    @include onTablet {
-      font-size: 20px;
-    }
-    font-weight: 500;
-    font-size: 30px;
-  }
 
-  &__item {
-    @include onPhone {
-      font-size: 15px;
+    &__item {
+        @include onPhone {
+            font-size: 15px;
+        }
+        @include onTablet {
+            font-size: 15px;
+        }
+        margin-bottom: 10px;
+        position: relative;
     }
-    @include onTablet {
-      font-size: 15px;
-    }
-    margin-bottom: 10px;
-    position: relative;
-  }
 
-  &__price {
-    float: right;
-    font-weight: bold;
-    color: #efb729;
-  }
+    &__price {
+        float: right;
+        font-weight: bold;
+        color: #efb729;
+    }
 }

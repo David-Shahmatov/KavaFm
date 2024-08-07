@@ -76,7 +76,9 @@ const FoodPage = ({ items }) => {
         if (productCount[id] < 10) {
             setCountOfProduct((prevCount) => {
                 const newCount = prevCount + 1;
-                dispatch(actions.updateCartItemQuantity({ id, quantity: newCount }));
+                dispatch(
+                    actions.updateCartItemQuantity({ id, quantity: newCount })
+                );
                 return newCount;
             });
         }
@@ -86,7 +88,9 @@ const FoodPage = ({ items }) => {
         if (countOfProduct > 1) {
             setCountOfProduct((prevCount) => {
                 const newCount = prevCount - 1;
-                dispatch(actions.updateCartItemQuantity({ id, quantity: newCount }));
+                dispatch(
+                    actions.updateCartItemQuantity({ id, quantity: newCount })
+                );
                 return newCount;
             });
         } else {
@@ -114,111 +118,136 @@ const FoodPage = ({ items }) => {
                 </p>
             </div>
             <div className={styles.foodPage}>
-                <img
-                    className={styles.foodPage__image}
-                    src={foodImage}
-                    alt=""
-                />
-                <div className={styles.infoBlock}>
-                    <p className={styles.infoBlock__title}>{food.title}</p>
-                    <p className={styles.infoBlock__weight}>{food.weight}</p>
-                    <p className={styles.infoBlock__ingredients}>
-                        <p style={{ fontSize: "25px", color: "#000" }}>
-                            Склад:
-                        </p>{" "}
-                        {food.ingredients}
-                    </p>
-                    <div className={styles.priceBlock}>
-                        <p className={styles.priceBlock__text}>Ціна:</p>
-                        <p className={styles.priceBlock__price}>
-                            {totalFoodPrice} грн
+                <div className={styles.foodPage__inner}>
+                    <img className={styles.foodPage__image} src={foodImage} />
+                    <div className={styles.infoBlock}>
+                        <p className={styles.infoBlock__title}>{food.title}</p>
+                        <p className={styles.infoBlock__weight}>
+                            {food.weight}
                         </p>
+                        <p className={styles.infoBlock__ingredients}>
+                            <p style={{ fontSize: "25px", color: "#000" }}>
+                                Склад:
+                            </p>{" "}
+                            {food.ingredients}
+                        </p>
+                        <div className={styles.priceBlock}>
+                            <p className={styles.priceBlock__text}>Ціна:</p>
+                            <p className={styles.priceBlock__price}>
+                                {totalFoodPrice} грн
+                            </p>
+                        </div>
+                        {!itemInCart ? (
+                            <div
+                                className={styles.cart}
+                                onClick={handleAddToCart}
+                            >
+                                <img
+                                    src={cart}
+                                    alt=""
+                                    className={styles.cart__image}
+                                />
+                                <p className={styles.cart__title}>В кошик</p>
+                            </div>
+                        ) : (
+                            <div className={styles.counter}>
+                                <img
+                                    className={styles.counter__icon}
+                                    src={minus}
+                                    alt="subtract"
+                                    onClick={subtractMethod}
+                                />
+                                <p className={styles.counter__value}>
+                                    {productCount[id]}
+                                </p>
+                                <img
+                                    className={styles.counter__icon}
+                                    src={plus}
+                                    alt="add"
+                                    onClick={addMethod}
+                                />
+                            </div>
+                        )}
+                        {location.pathname.includes("pizza") && (
+                            <div className={styles.checklist}>
+                                <p className={styles.checklist__title}>
+                                    Додатки до піци: (50гр.)
+                                </p>
+                                <ul className={styles.checklist__list}>
+                                    <li className={styles.checklist__item}>
+                                        Моцарела, пармезан (30гр.), гриби,
+                                        перець, томати.
+                                        <span
+                                            className={styles.checklist__price}
+                                        >
+                                            20 грн
+                                        </span>
+                                    </li>
+                                    <li className={styles.checklist__item}>
+                                        Шинка, салямі, бекон, куряче філе,
+                                        ковбаски мисливські, салямі чоррізо, дор
+                                        блю.
+                                        <span
+                                            className={styles.checklist__price}
+                                        >
+                                            25 грн
+                                        </span>
+                                    </li>
+                                    <li className={styles.checklist__item}>
+                                        Лосось (50гр.)
+                                        <span
+                                            className={styles.checklist__price}
+                                        >
+                                            50 грн
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                        {location.pathname.includes("garnish") && (
+                            <div className={styles.checklist}>
+                                <p className={styles.checklist__title}>
+                                    Додатки до гарніру: (50гр.)
+                                </p>
+                                <ul className={styles.checklist__list}>
+                                    <li className={styles.checklist__item}>
+                                        Соус сирний
+                                        <span
+                                            className={styles.checklist__price}
+                                        >
+                                            5 грн
+                                        </span>
+                                    </li>
+                                    <li className={styles.checklist__item}>
+                                        Соус каррі
+                                        <span
+                                            className={styles.checklist__price}
+                                        >
+                                            5 грн
+                                        </span>
+                                    </li>
+                                    <li className={styles.checklist__item}>
+                                        Кетчуп
+                                        <span
+                                            className={styles.checklist__price}
+                                        >
+                                            5 грн
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
                     </div>
-                    {!itemInCart ? (
-                        <div className={styles.cart} onClick={handleAddToCart}>
-                            <img
-                                src={cart}
-                                alt=""
-                                className={styles.cart__image}
-                            />
-                            <p className={styles.cart__title}>В кошик</p>
-                        </div>
-                    ) : (
-                        <div className={styles.counter}>
-                            <img
-                                className={styles.counter__icon}
-                                src={minus}
-                                alt="subtract"
-                                onClick={subtractMethod}
-                            />
-                            <p className={styles.counter__value}>
-                                {productCount[id]}
-                            </p>
-                            <img
-                                className={styles.counter__icon}
-                                src={plus}
-                                alt="add"
-                                onClick={addMethod}
-                            />
-                        </div>
-                    )}
-                    {location.pathname.includes("pizza") && (
-                        <div className={styles.checklist}>
-                            <p className={styles.checklist__title}>
-                                Додатки до піци: (50гр.)
-                            </p>
-                            <ul className={styles.checklist__list}>
-                                <li className={styles.checklist__item}>
-                                    Моцарела, пармезан (30гр.), гриби, перець,
-                                    томати.
-                                    <span className={styles.checklist__price}>
-                                        20 грн
-                                    </span>
-                                </li>
-                                <li className={styles.checklist__item}>
-                                    Шинка, салямі, бекон, куряче філе, ковбаски
-                                    мисливські, салямі чоррізо, дор блю.
-                                    <span className={styles.checklist__price}>
-                                        25 грн
-                                    </span>
-                                </li>
-                                <li className={styles.checklist__item}>
-                                    Лосось (50гр.)
-                                    <span className={styles.checklist__price}>
-                                        50 грн
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    )}
-                    {location.pathname.includes("garnish") && (
-                        <div className={styles.checklist}>
-                            <p className={styles.checklist__title}>
-                                Додатки до гарніру: (50гр.)
-                            </p>
-                            <ul className={styles.checklist__list}>
-                                <li className={styles.checklist__item}>
-                                    Соус сирний
-                                    <span className={styles.checklist__price}>
-                                        5 грн
-                                    </span>
-                                </li>
-                                <li className={styles.checklist__item}>
-                                    Соус каррі
-                                    <span className={styles.checklist__price}>
-                                        5 грн
-                                    </span>
-                                </li>
-                                <li className={styles.checklist__item}>
-                                    Кетчуп
-                                    <span className={styles.checklist__price}>
-                                        5 грн
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    )}
                 </div>
+                    <p className={styles.foodPage__desc}>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aliquid blanditiis illum autem, nam voluptatibus laborum tenetur. Laudantium minima eum velit, fugiat sunt, odit enim aut illum, molestias consectetur impedit.
+                        Veniam rerum deleniti ad sed dolor, minima voluptas placeat quia eum nulla sit quas possimus esse non maxime ipsum suscipit culpa aut perferendis atque quasi a officia. Perspiciatis, deserunt quis!
+                        At doloremque sapiente quisquam voluptatum, laborum tempore accusantium accusamus fuga minus omnis? Ipsum et dignissimos maiores quidem, ducimus inventore rem. Suscipit omnis doloremque, rerum voluptatibus vitae inventore provident? Ab, obcaecati.
+                        Inventore asperiores alias optio mollitia quos perferendis, soluta illum voluptates nisi rem, reprehenderit fuga! Atque esse temporibus voluptates debitis. Ab omnis nostrum distinctio ipsum porro dolorum quos error odio autem?
+                        Eum, ex? Veniam veritatis assumenda magnam aspernatur facere obcaecati ab soluta quaerat modi ratione repellendus sapiente, doloremque exercitationem voluptates ad magni tenetur recusandae perspiciatis sed dolore temporibus ipsam velit? Deleniti.
+                        Repudiandae, accusantium ad ab labore expedita perferendis ipsa saepe quasi distinctio perspiciatis exercitationem praesentium, fugit est esse tempora minus deserunt maiores quo laboriosam libero? Delectus tempore ipsam libero cumque vel.
+                        Quibusdam velit officiis rerum maiores repellendus nisi, molestias praesentium non obcaecati reiciendis error tempora? Vitae qui vel assumenda nisi, necessitatibus ab provident ea iste modi eos architecto labore incidunt quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit natus cumque accusamus eveniet corrupti explicabo, voluptatibus recusandae nemo magnam officiis quaerat facilis sint rem, autem pariatur quae, doloribus fuga eos. lore
+                    </p>
             </div>
         </>
     );

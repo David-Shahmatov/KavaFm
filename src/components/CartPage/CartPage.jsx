@@ -94,7 +94,6 @@ const CartPage = () => {
                                     weight={item.weight}
                                     image={item.image}
                                     price={item.price}
-                                    // priceWithAdds={item.priceWithAdds}
                                     id={item.id}
                                     quantity={item.quantity}
                                     type={item.type}
